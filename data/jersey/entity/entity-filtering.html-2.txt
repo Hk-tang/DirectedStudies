@@ -1,0 +1,7 @@
+new ResourceConfig()
+    // Set entity-filtering scope via configuration.
+    .property(EntityFilteringFeature.ENTITY_FILTERING_SCOPE, new Annotation[] {SecurityAnnotations.rolesAllowed("manager")})
+    // Register the SecurityEntityFilteringFeature.
+    .register(SecurityEntityFilteringFeature.class)
+    // Further configuration of ResourceConfig.
+    .register( ... );

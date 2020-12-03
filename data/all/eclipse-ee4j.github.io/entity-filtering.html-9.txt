@@ -1,0 +1,21 @@
+@Target({ElementType.TYPE, ElementType.METHOD, ElementType.FIELD})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@EntityFiltering
+public @interface ProjectDetailedView {
+
+    /**
+     * Factory class for creating instances of {@code ProjectDetailedView} annotation.
+     */
+    public static class Factory
+                        extends AnnotationLiteral<ProjectDetailedView>
+                        implements ProjectDetailedView {
+
+        private Factory() {
+        }
+
+        public static ProjectDetailedView get() {
+            return new Factory();
+        }
+    }
+}

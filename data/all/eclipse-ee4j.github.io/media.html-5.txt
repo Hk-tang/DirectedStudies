@@ -1,0 +1,4 @@
+JsonObject myObject = Json.createObjectBuilder()
+        .add("name", "Agamemnon")
+        .add("age", 32)
+        .build();

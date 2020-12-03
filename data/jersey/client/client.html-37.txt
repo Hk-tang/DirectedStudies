@@ -1,0 +1,12 @@
+
+            public static class MyFeature implements Feature {
+                @Override
+                public boolean configure(FeatureContext context) {
+                    context.register(
+                        (InvocationBuilderListener)(l)->
+                        l.getHeaders().add("MY_HEADER", "MY_VALUE")
+                    );
+                    return true;
+                }
+            }
+        

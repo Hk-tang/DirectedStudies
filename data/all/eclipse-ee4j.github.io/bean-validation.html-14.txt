@@ -1,0 +1,15 @@
+public class EmailValidator implements ConstraintValidator<Email, String> {
+
+    @Context
+    private UriInfo uriInfo;
+
+    public void initialize(Email email) {
+        ...
+    }
+
+    public boolean isValid(String value, ConstraintValidatorContext context) {
+        // Use UriInfo.
+
+        ...
+    }
+}

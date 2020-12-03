@@ -1,0 +1,30 @@
+@Provider
+class MyTemplateProcessor implements TemplateProcessor<String> {
+
+    @Override
+    public String resolve(String path, final MediaType mediaType) {
+        final String extension = ".testp";
+
+        if (!path.endsWith(extension)) {
+            path = path + extension;
+        }
+
+        final URL u = this.getClass().getResource(path);
+        return u == null ? null : path;
+    }
+
+    @Override
+    public void writeTo(String templateReference,
+                        Viewable viewable,
+                        MediaType mediaType,
+                        OutputStream out) throws IOException {
+        final PrintStream ps = new PrintStream(out);
+        ps.print("path=");
+        ps.print(templateReference);
+        ps.println();
+        ps.print("model=");
+        ps.print(viewable.getModel().toString());
+        ps.println();
+    }
+
+}

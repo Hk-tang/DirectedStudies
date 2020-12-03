@@ -1,0 +1,5 @@
+final WebTarget target = ... some web target
+Response response = target.path("resource").request().get();
+System.out.println("Connection is still open.");
+System.out.println("string response: " + response.readEntity(String.class));
+System.out.println("Now the connection is closed.");

@@ -1,0 +1,19 @@
+OAuth2CodeGrantFlow.Builder builder =
+    OAuth2ClientSupport.authorizationCodeGrantFlowBuilder(clientId,
+                            "https://example.com/oauth/authorization",
+                            "https://example.com/oauth/token");
+OAuth2CodeGrantFlow flow = builder
+    .property(OAuth2CodeGrantFlow.Phase.AUTHORIZATION, "readOnly", "true")
+    .scope("contact")
+    .build();
+String authorizationUri = flow.start();
+
+// Here we must redirect the user to the authorizationUri
+// and let the user approve an access for our app.
+
+...
+
+// We must handle redirection back to our web resource
+// and extract code and state from the request
+final TokenResult result = flow.finish(code, state);
+System.out.println("Access Token: " + result.get);

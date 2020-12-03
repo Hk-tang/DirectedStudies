@@ -1,0 +1,5 @@
+@GET
+public String get(@Context UriInfo ui) {
+    MultivaluedMap<String, String> queryParams = ui.getQueryParameters();
+    MultivaluedMap<String, String> pathParams = ui.getPathParameters();
+}

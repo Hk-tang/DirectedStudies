@@ -1,0 +1,8 @@
+Application my-monitored-application was initialized.
+Request 1 started.
+Resource method POST started for request 1
+Request 1 finished. Processing time 330 ms.
+Request 2 started.
+Resource method GET started for request 2
+Request 2 finished. Processing time 4 ms.
+Application my-monitored-application destroyed.

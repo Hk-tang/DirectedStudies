@@ -1,0 +1,7 @@
+<init-param>
+    <param-name>jersey.config.server.provider.classnames</param-name>
+    <param-value>
+        org.foo.myresources.MyDogResource,
+        org.bar.otherresources.MyCatResource
+    </param-value>
+</init-param>

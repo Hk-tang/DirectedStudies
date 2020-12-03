@@ -1,0 +1,5 @@
+@POST
+@Consumes("application/x-www-form-urlencoded")
+public void post(MultivaluedMap<String, String> formParams) {
+    // Store the message
+}

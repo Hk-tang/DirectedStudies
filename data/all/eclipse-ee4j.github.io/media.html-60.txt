@@ -1,0 +1,15 @@
+// Configure Properties.
+final Map<String, Object> properties = new HashMap<String, Object>();
+// ...
+
+// Obtain a ClassLoader you want to use.
+final ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+
+final ResourceConfig config = new ResourceConfig()
+    .packages("org.glassfish.jersey.examples.xmlmoxy")
+    .register(new MoxyXmlFeature(
+        properties,
+        classLoader,
+        true, // Flag to determine whether eclipselink-oxm.xml file should be used for lookup.
+        CustomClassA.class, CustomClassB.class  // Classes to be bound.
+    ));

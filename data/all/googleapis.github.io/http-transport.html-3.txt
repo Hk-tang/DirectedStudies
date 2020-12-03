@@ -1,0 +1,19 @@
+<code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">MyInitializer</span> <span class="kd">implements</span> <span class="nc">HttpRequestInitializer</span><span class="o">,</span> <span class="nc">HttpUnsuccessfulResponseHandler</span> <span class="o">{</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">handleResponse</span><span class="o">(</span>
+      <span class="nc">HttpRequest</span> <span class="n">request</span><span class="o">,</span> <span class="nc">HttpResponse</span> <span class="n">response</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">retrySupported</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">getStatusCode</span><span class="o">()</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">response</span><span class="o">.</span><span class="na">getStatusMessage</span><span class="o">());</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">initialize</span><span class="o">(</span><span class="nc">HttpRequest</span> <span class="n">request</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="n">request</span><span class="o">.</span><span class="na">setUnsuccessfulResponseHandler</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="o">...</span>
+
+<span class="nc">HttpRequestFactory</span> <span class="n">requestFactory</span> <span class="o">=</span> <span class="n">transport</span><span class="o">.</span><span class="na">createRequestFactory</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyInitializer</span><span class="o">());</span>
+</code>

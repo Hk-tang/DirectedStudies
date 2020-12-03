@@ -1,0 +1,2 @@
+200
+MyBean{anyString='Hello World!', anyNumber=42}

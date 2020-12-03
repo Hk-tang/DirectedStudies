@@ -1,0 +1,16 @@
+@Path("/")
+@NonEmptyNames
+class MyResourceClass {
+
+    @NotNull
+    @FormParam("firstName")
+    private String firstName;
+
+    @NotNull
+    @FormParam("lastName")
+    private String lastName;
+
+    private String email;
+
+    ...
+}

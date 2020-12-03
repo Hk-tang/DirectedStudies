@@ -1,0 +1,4 @@
+<span class="pl-smi">Request</span> propFindRequest <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">RequestBuilder</span>(<span class="pl-s"><span class="pl-pds">"</span>PROPFIND<span class="pl-pds">"</span></span>)<span class="pl-k">.</span>setUrl(<span class="pl-s"><span class="pl-pds">"</span>http://host:port<span class="pl-pds">"</span></span>)<span class="pl-k">.</span>build();
+<span class="pl-smi">Response</span> response <span class="pl-k">=</span> c<span class="pl-k">.</span>executeRequest(propFindRequest, <span class="pl-k">new</span> <span class="pl-smi">AsyncHandler</span>() {
+  <span class="pl-c"><span class="pl-c">//</span> ...</span>
+})<span class="pl-k">.</span>get();

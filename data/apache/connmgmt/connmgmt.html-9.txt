@@ -1,0 +1,6 @@
+
+KeyStore myTrustStore = <...>
+SSLContext sslContext = SSLContexts.custom()
+        .loadTrustMaterial(myTrustStore)
+        .build();
+SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(sslContext);

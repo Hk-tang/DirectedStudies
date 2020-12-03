@@ -1,0 +1,10 @@
+
+// Execute a POST with the 'expect-continue' handshake, using HTTP/1.1,
+// containing a request body as String and return response content as byte array.
+Request.Post("http://somehost/do-stuff")
+        .useExpectContinue()
+        .version(HttpVersion.HTTP_1_1)
+        .bodyString("Important stuff", ContentType.DEFAULT_TEXT)
+        .execute().returnContent().asBytes();
+
+    

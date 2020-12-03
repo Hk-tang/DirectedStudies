@@ -1,0 +1,15 @@
+
+Executor executor = Executor.newInstance()
+        .auth(new HttpHost("somehost"), "username", "password")
+        .auth(new HttpHost("myproxy", 8080), "username", "password")
+        .authPreemptive(new HttpHost("myproxy", 8080));
+
+executor.execute(Request.Get("http://somehost/"))
+        .returnContent().asString();
+
+executor.execute(Request.Post("http://somehost/do-stuff")
+        .useExpectContinue()
+        .bodyString("Important stuff", ContentType.DEFAULT_TEXT))
+        .returnContent().asString();
+
+    

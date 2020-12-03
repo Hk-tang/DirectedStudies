@@ -1,0 +1,9 @@
+@XmlRootElement
+public class Address {
+
+    private String streetAddress;
+
+    private String region;
+
+    private PhoneNumber phoneNumber;
+}

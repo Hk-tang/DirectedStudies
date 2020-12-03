@@ -1,0 +1,8 @@
+event: message-to-client
+data: Hello world 0!
+
+event: message-to-client
+data: Hello world 1!
+
+...
+                    

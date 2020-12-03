@@ -1,0 +1,18 @@
+<span class="emphasis"><em>Content-Type: multipart/form-data; boundary=Boundary_1_511262261_1369143433608</em></span>
+
+--Boundary_1_511262261_1369143433608
+Content-Type: text/plain
+Content-Disposition: form-data; name="hello"
+
+hello
+--Boundary_1_511262261_1369143433608
+Content-Type: application/xml
+Content-Disposition: form-data; name="xml"
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><jaxbBean><value>xml</value></jaxbBean>
+--Boundary_1_511262261_1369143433608
+Content-Type: application/json
+Content-Disposition: form-data; name="json"
+
+{"value":"json"}
+--Boundary_1_511262261_1369143433608--

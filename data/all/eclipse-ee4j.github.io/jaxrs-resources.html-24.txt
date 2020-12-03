@@ -1,0 +1,26 @@
+@Path("{id:\\d+}")
+public class InjectedResource {
+    // Injection onto field
+    @DefaultValue("q") @QueryParam("p")
+    private String p;
+
+    // Injection onto constructor parameter
+    public InjectedResource(@PathParam("id") int id) { ... }
+
+    // Injection onto resource method parameter
+    @GET
+    public String get(@Context UriInfo ui) { ... }
+
+    // Injection onto sub-resource resource method parameter
+    @Path("sub-id")
+    @GET
+    public String get(@PathParam("sub-id") String id) { ... }
+
+    // Injection onto sub-resource locator method parameter
+    @Path("sub-id")
+    public SubResource getSubResource(@PathParam("sub-id") String id) { ... }
+
+    // Injection using bean setter method
+    @HeaderParam("X-header")
+    public void setHeader(String header) { ... }
+}

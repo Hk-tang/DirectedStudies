@@ -1,0 +1,19 @@
+
+PublicSuffixMatcher publicSuffixMatcher = PublicSuffixMatcherLoader.getDefault();
+
+Registry<CookieSpecProvider> r = RegistryBuilder.<CookieSpecProvider>create()
+        .register(CookieSpecs.DEFAULT,
+                new DefaultCookieSpecProvider(publicSuffixMatcher))
+        .register(CookieSpecs.STANDARD,
+                new RFC6265CookieSpecProvider(publicSuffixMatcher))
+        .register("easy", new EasySpecProvider())
+        .build();
+
+RequestConfig requestConfig = RequestConfig.custom()
+        .setCookieSpec("easy")
+        .build();
+
+CloseableHttpClient httpclient = HttpClients.custom()
+        .setDefaultCookieSpecRegistry(r)
+        .setDefaultRequestConfig(requestConfig)
+        .build();

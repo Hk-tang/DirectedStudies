@@ -1,0 +1,4 @@
+String authorizationUri = authFlow.start();
+// here we must direct the user to authorization uri to approve
+// our application. The result will be verifier code (String).
+AccessToken accessToken = authFlow.finish(verifier);

@@ -1,0 +1,4 @@
+@PageLinks(OrderPage.class)
+@GET
+public Response list(@QueryParam("page") @DefaultValue("0") int page,
+                     @QueryParam("size") @DefaultValue("20") int size)

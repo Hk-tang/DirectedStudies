@@ -1,0 +1,2 @@
+        ResourceConfig config = new ResourceConfig(HelloWorldResource.class);
+        config.register(new LoggingFeature(LOGGER, LoggingFeature.Verbosity.PAYLOAD_ANY));

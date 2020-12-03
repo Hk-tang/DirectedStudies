@@ -1,0 +1,40 @@
+final WebTarget destination = ...;
+final WebTarget forecast = ...;
+
+// Recommended places.
+CompletionStage<List<Destination>> recommended =
+        destination.path("recommended")
+                   .request()
+                   // Identify the user.
+                   .header("Rx-User", "CompletionStage")
+                   // Reactive invoker.
+                   .rx()
+                   // Return a list of destinations.
+                   .get(new GenericType<List<Destination>>() {})
+                   .exceptionally(throwable -> {
+                       errors.offer("Recommended: " + throwable.getMessage());
+                       return Collections.emptyList();
+                   });
+
+// get Forecast for recommended destinations.
+return recommended.thenCompose(destinations -> {
+
+    List<CompletionStage<Recommendation>> recommendations = destinations.stream().map(destination -> {
+    // For each destination, obtain a weather forecast ...
+    final CompletionStage<Forecast> forecastResult =
+            forecast.resolveTemplate("destination", destination.getDestination())
+                    .request().rx().get(Forecast.class)
+                    .exceptionally(throwable -> {
+                        errors.offer("Forecast: " + throwable.getMessage());
+                        return new Forecast(destination.getDestination(), "N/A");
+                    });
+
+                    //noinspection unchecked
+                    return CompletableFuture.completedFuture(new Recommendation(destination))
+                                            // Set forecast for recommended destination.
+                                            .thenCombine(forecastResult, Recommendation::forecast)
+                    }).collect(Collectors.toList());
+
+                    // Transform List<CompletionStage<Recommendation>> to CompletionStage<List<Recommendation>>
+                    return sequence(recommendations);
+    });

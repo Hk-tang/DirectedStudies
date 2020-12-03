@@ -1,0 +1,23 @@
+@POST
+@Path("StreamSource")
+public StreamSource getStreamSource(StreamSource streamSource) {
+    return streamSource;
+}
+
+@POST
+@Path("SAXSource")
+public SAXSource getSAXSource(SAXSource saxSource) {
+    return saxSource;
+}
+
+@POST
+@Path("DOMSource")
+public DOMSource getDOMSource(DOMSource domSource) {
+    return domSource;
+}
+
+@POST
+@Path("Document")
+public Document getDocument(Document document) {
+    return document;
+}

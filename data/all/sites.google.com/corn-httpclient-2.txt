@@ -1,0 +1,9 @@
+HttpForm form = new HttpForm(new URI("http://localhost:8080/test/formtest.jsp"));
+form.setCredentials("user1", "password");
+String val = "test";
+form.putFieldValue("input1", val);
+HttpResponse response = form.doPost();
+assertNotNull(response);
+assertFalse(response.hasError());
+assertNotNull(response.getData());
+assertTrue(response.getData().contains("received "  val));

@@ -1,0 +1,9 @@
+public class Reloader implements
+                            ContainerNotifier { List<ContainerListener> ls;
+
+                            public Reloader() { ls = new ArrayList<ContainerListener>(); }
+
+                            public void addListener(ContainerListener l) { ls.add(l); }
+
+                            public void reload() { for (ContainerListener l : ls) { l.onReload(); } } }
+                        

@@ -1,0 +1,1 @@
+List classes = CPScanner.scanClasses(new ClassFilter().packageName("net.sf.corn.cps.sample").interfaceClass(SampleInterface.class));

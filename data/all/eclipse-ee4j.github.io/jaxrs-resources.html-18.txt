@@ -1,0 +1,31 @@
+@Singleton
+@Path("/printers")
+public class PrintersResource {
+
+    @GET
+    @Produces({"application/json", "application/xml"})
+    public WebResourceList getMyResources() { ... }
+
+    @GET @Path("/list")
+    @Produces({"application/json", "application/xml"})
+    public WebResourceList getListOfPrinters() { ... }
+
+    @GET @Path("/jMakiTable")
+    @Produces("application/json")
+    public PrinterTableModel getTable() { ... }
+
+    @GET @Path("/jMakiTree")
+    @Produces("application/json")
+    public TreeModel getTree() { ... }
+
+    @GET @Path("/ids/{printerid}")
+    @Produces({"application/json", "application/xml"})
+    public Printer getPrinter(@PathParam("printerid") String printerId) { ... }
+
+    @PUT @Path("/ids/{printerid}")
+    @Consumes({"application/json", "application/xml"})
+    public void putPrinter(@PathParam("printerid") String printerId, Printer printer) { ... }
+
+    @DELETE @Path("/ids/{printerid}")
+    public void deletePrinter(@PathParam("printerid") String printerId) { ... }
+}

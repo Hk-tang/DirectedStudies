@@ -1,0 +1,11 @@
+@Path("/")
+class MyResourceClass {
+
+    @Email
+    @ValidateOnExecution
+    public String getEmail() {
+        return email;
+    }
+
+    ...
+}

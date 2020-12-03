@@ -1,0 +1,16 @@
+@Path("projects")
+@Produces("application/json")
+public class ProjectsResource {
+
+    @GET
+    public List<Project> getProjects() {
+        return getDetailedProjects();
+    }
+
+    @GET
+    @Path("detailed")
+    @ProjectDetailedView
+    public List<Project> getDetailedProjects() {
+        return EntityStore.getProjects();
+    }
+}

@@ -1,0 +1,4 @@
+Client client = Client.create(); WebResource
+                        webResource = client.resource(restURL); webResource.addFilter(new HTTPBasicAuthFilter(username,
+                        password));
+                    

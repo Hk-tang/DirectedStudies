@@ -1,0 +1,11 @@
+package com.example;
+
+@Path("foo")
+public class Foo {
+
+    @GET
+    @Template(name = "index.foo")
+    public String get() {
+        return "FOO";
+    }
+}

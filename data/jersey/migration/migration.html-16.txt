@@ -1,0 +1,3 @@
+Reloader reloader = new Reloader();
+                            resourceConfig.addSingletons(reloader);
+                        

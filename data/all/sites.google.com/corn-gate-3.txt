@@ -1,0 +1,2 @@
+JsonRpcClient client= new JsonRpcClient(new URI("http://localhost/jsonrpc"));
+JsonRpcResponse resp= client.callAService("HelloWorldService","sayHelloWorld");

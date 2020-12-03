@@ -1,0 +1,15 @@
+<web-app>
+    <filter>
+        <filter-name>MyApplication</filter-name>
+        <filter-class>org.glassfish.jersey.servlet.ServletContainer</filter-class>
+        <init-param>
+            ...
+        </init-param>
+    </filter>
+    ...
+    <filter-mapping>
+        <filter-name>MyApplication</filter-name>
+        <url-pattern>/myApp/*</url-pattern>
+    </filter-mapping>
+    ...
+</web-app>

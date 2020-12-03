@@ -1,0 +1,4 @@
+UriBuilder.fromUri("http://localhost/")
+    .path("{a}")
+    .queryParam("name", "{value}")
+    .build("segment", "value");

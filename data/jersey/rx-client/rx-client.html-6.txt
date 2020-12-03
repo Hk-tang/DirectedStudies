@@ -1,0 +1,10 @@
+Client client = ClientBuilder.newClient();
+client.register(RxFlowableInvokerProvider.class);
+
+Flowable<String> responseFlowable =
+        client.target("http://jersey.java.net")
+              .request()
+              .rx(RxFlowableInvoker.class)
+              .get(String.class);
+
+String responseString = responseFlowable.blockingFirst();

@@ -1,0 +1,13 @@
+@Path("clients")
+@Produces("application/json")
+public class ClientsResource {
+
+    @Uri("projects")
+    private WebTarget target;
+
+    @GET
+    public List<Project> getProjects() {
+        return target.request()
+            .post(Entity.entity(project, new Annotation[] {ProjectDetailedView.Factory.get()}));
+    }
+}

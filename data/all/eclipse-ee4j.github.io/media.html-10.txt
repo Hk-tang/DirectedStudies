@@ -1,0 +1,3 @@
+new ResourceConfig()
+                            .property(MarshallerProperties.JSON_NAMESPACE_SEPARATOR, ".")
+                            // further configuration

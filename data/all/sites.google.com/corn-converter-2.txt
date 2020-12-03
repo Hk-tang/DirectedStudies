@@ -1,0 +1,8 @@
+JsTypeComplex jsObj = new JsTypeComplex();
+jsObj.put("attribute1", new JsTypeSimple("Deneme"));
+jsObj.put("attribute2", new JsTypeSimple(1234.4f));
+assertFalse(jsObj.isList());
+assertFalse(jsObj.isNull());
+assertFalse(jsObj.isEmpty());
+assertTrue(jsObj.isComplex());
+System.out.println(jsObj.toJsonString());

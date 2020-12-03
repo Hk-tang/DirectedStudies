@@ -1,0 +1,4 @@
+ResourceConfig resourceConfig = new
+                        DefaultResourceConfig(); resourceConfig.getSingletons().add( new SingletonTypeInjectableProvider<Context,
+                        SingletonType>( SingletonType.class, new SingletonType()) {});
+                    

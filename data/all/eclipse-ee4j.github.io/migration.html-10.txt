@@ -1,0 +1,5 @@
+ResourceConfig resourceConfig = new
+                        DefaultResourceConfig(); resourceConfig.getSingletons().add( new PerRequestTypeInjectableProvider<Context,
+                        PerRequestType>() { @Override public Injectable<PerRequestType> getInjectable(ComponentContext
+                        ic, Context context) { //... } });
+                    

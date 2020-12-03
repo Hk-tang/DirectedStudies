@@ -1,0 +1,6 @@
+
+HttpConnectionFactory<HttpRoute, ManagedHttpClientConnection> connFactory =
+        new ManagedHttpClientConnectionFactory(
+            new DefaultHttpRequestWriterFactory(),
+            new DefaultHttpResponseParserFactory(
+                    new MyLineParser(), new DefaultHttpResponseFactory()));

@@ -1,0 +1,6 @@
+May 26, 2013 8:08:45 PM org.glassfish.grizzly.http.server.NetworkListener start
+INFO: Started listener bound to [localhost:8080]
+May 26, 2013 8:08:45 PM org.glassfish.grizzly.http.server.HttpServer start
+INFO: [HttpServer] Started.
+Jersey app started with WADL available at http://localhost:8080/myapp/application.wadl
+Hit enter to stop it...

@@ -1,0 +1,3 @@
+
+task.cancel(true)
+task.get() // throws an Exception

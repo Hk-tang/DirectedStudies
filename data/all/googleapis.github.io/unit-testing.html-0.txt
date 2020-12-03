@@ -1,0 +1,4 @@
+<code><span class="nc">HttpTransport</span> <span class="n">transport</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MockHttpTransport</span><span class="o">();</span>
+<span class="nc">HttpRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="n">transport</span><span class="o">.</span><span class="na">createRequestFactory</span><span class="o">().</span><span class="na">buildGetRequest</span><span class="o">(</span><span class="nc">HttpTesting</span><span class="o">.</span><span class="na">SIMPLE_GENERIC_URL</span><span class="o">);</span>
+<span class="nc">HttpResponse</span> <span class="n">response</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span>
+</code>

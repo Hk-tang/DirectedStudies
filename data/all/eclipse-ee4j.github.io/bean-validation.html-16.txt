@@ -1,0 +1,13 @@
+@XmlRootElement
+public final class ValidationError {
+
+    private String message;
+
+    private String messageTemplate;
+
+    private String path;
+
+    private String invalidValue;
+
+    ...
+}

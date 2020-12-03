@@ -1,0 +1,4 @@
+
+PublicSuffixMatcher publicSuffixMatcher = PublicSuffixMatcherLoader.load(
+    PublicSuffixMatcher.class.getResource("my-copy-effective_tld_names.dat"));
+DefaultHostnameVerifier hostnameVerifier = new DefaultHostnameVerifier(publicSuffixMatcher);

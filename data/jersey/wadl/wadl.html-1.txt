@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application xmlns="http://wadl.dev.java.net/2009/02">
+    <doc xmlns:jersey="http://jersey.java.net/" jersey:generatedBy="Jersey: 2.5-SNAPSHOT 2013-12-20 17:14:21"/>
+    <grammars/>
+    <resources base="http://localhost:9998/">
+        <resource path="country/{id}">
+            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:int" style="template" name="countryId"/>
+            <method name="GET" id="getCountry">
+                <response>
+                    <representation mediaType="application/xml"/>
+                </response>
+            </method>
+        </resource>
+    </resources>
+</application>

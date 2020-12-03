@@ -1,0 +1,8 @@
+ConsumerCredentials consumerCredentials = new ConsumerCredentials(
+                "a846d84e68421b321a32d, "f13aed84190bc");
+OAuth1AuthorizationFlow authFlow = OAuth1ClientSupport.builder(consumerCredentials)
+    .authorizationFlow(
+        "http://api.twitter.com/oauth/request_token",
+        "http://api.twitter.com/oauth/access_token",
+        "http://api.twitter.com/oauth/authorize")
+    .build();

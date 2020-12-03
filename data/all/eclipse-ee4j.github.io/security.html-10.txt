@@ -1,0 +1,4 @@
+Feature feature = authFlow.getOAuth1Feature();
+Client client = ClientBuilder.newBuilder()
+    .register(feature)
+    .build();

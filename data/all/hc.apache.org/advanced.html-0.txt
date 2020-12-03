@@ -1,0 +1,15 @@
+
+class MyLineParser extends BasicLineParser {
+
+    @Override
+    public Header parseHeader(
+            CharArrayBuffer buffer) throws ParseException {
+        try {
+            return super.parseHeader(buffer);
+        } catch (ParseException ex) {
+            // Suppress ParseException exception
+            return new BasicHeader(buffer.toString(), null);
+        }
+    }
+
+}

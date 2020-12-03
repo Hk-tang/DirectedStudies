@@ -1,0 +1,5 @@
+{
+   "description" : "Jersey is the open source (under dual EPL+GPL license) JAX-RS 2.1 (JSR 370) production quality Reference Implementation for building RESTful Web services.",
+   "id" : 1,
+   "name" : "Jersey"
+}

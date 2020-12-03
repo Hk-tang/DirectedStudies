@@ -1,0 +1,9 @@
+
+            /**
+            * Whenever an Invocation.Builder is created, (i.e. when
+            * WebTarget#request() is called, this method would be invoked.
+            *
+            * @param context the updated InvocationBuilderContext.
+            */
+            void onNewBuilder(InvocationBuilderContext context);
+        

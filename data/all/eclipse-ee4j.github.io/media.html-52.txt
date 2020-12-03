@@ -1,0 +1,5 @@
+@POST
+@Consumes(MediaType.APPLICATION_XML)
+public void setPlanet(Planet planet) {
+    System.out.println("setPlanet " + planet);
+}

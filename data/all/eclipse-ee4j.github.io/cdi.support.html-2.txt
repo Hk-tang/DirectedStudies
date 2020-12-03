@@ -1,0 +1,9 @@
+            Weld weld = new Weld();
+            weld.initialize();
+
+            final HttpServer server = GrizzlyHttpServerFactory.createHttpServer(URI.create("http://localhost:8080/weld/"), jerseyResourceConfig);
+
+            // ...
+
+            server.shutdownNow();
+            weld.shutdown();

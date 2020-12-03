@@ -1,0 +1,7 @@
+curl -i http://localhost:8080/myapp/myresource
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Date: Sun, 26 May 2013 18:27:19 GMT
+Content-Length: 7
+
+Got it!

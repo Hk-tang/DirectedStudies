@@ -1,0 +1,4 @@
+// Create JAX-RS application.
+final Application application = new ResourceConfig()
+    .packages("org.glassfish.jersey.examples.multipart")
+    .register(MultiPartFeature.class)

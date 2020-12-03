@@ -1,0 +1,9 @@
+public interface CompletionStageRxInvoker extends RxInvoker<CompletionStage> {
+    @Override
+    public CompletionStage<Response> get();
+
+    @Override
+    public <T> CompletionStage<T> get(Class<T> responseType);
+
+    // ...
+}

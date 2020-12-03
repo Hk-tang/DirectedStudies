@@ -1,0 +1,5 @@
+new ResourceConfig()
+    .property(MvcFeature.TEMPLATE_BASE_PATH, "templates")
+    .register(MvcFeature.class)
+    // Further configuration of ResourceConfig.
+    .register( ... );

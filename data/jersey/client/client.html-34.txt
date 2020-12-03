@@ -1,0 +1,23 @@
+
+                /**
+                * The method is invoked after a request when no
+                * is thrown, or the Throwables are resolved
+                * by previous PostInvocationInterceptor.
+                *
+                * @param requestContext the request context.
+                * @param responseContext the response context
+                * of the original Response or response context
+                * defined by the new resolving Response.
+                */
+                void afterRequest(ClientRequestContext requestContext, ClientResponseContext responseContext);
+
+                /**
+                * The method is invoked after a Throwable is caught
+                * during the client request chain processing.
+                *
+                * @param requestContext the request context.
+                * @param exceptionContext the context available to handle the
+                * caught Throwables.
+                */
+                void onException(ClientRequestContext requestContext, ExceptionContext exceptionContext);
+            

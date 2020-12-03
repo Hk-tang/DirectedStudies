@@ -1,0 +1,12 @@
+@Path("resource")
+@Singleton
+public static class MyResource {
+    // Jersey will inject proxy of Security Context
+    @Context
+    SecurityContext securityContext;
+
+    @GET
+    public String getUserPrincipal() {
+        return securityContext.getUserPrincipal().getName();
+    }
+}

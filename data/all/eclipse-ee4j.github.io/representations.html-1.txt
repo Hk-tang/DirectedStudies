@@ -1,0 +1,5 @@
+@GET
+@Produces({"application/xml", "application/json"})
+public String doGetAsXmlOrJson() {
+  ...
+}

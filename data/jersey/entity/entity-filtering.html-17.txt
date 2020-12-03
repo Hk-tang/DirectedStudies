@@ -1,0 +1,4 @@
+ClientBuilder.newClient(config)
+    .target(uri)
+    .request()
+    .post(Entity.entity(project, new Annotation[] {ProjectDetailedView.Factory.get()}));

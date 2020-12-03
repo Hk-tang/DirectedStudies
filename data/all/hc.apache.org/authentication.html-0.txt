@@ -1,0 +1,5 @@
+
+UsernamePasswordCredentials creds = new UsernamePasswordCredentials("user", "pwd");
+System.out.println(creds.getUserPrincipal().getName());
+System.out.println(creds.getPassword());
+        

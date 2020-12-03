@@ -1,0 +1,5 @@
+
+LaxRedirectStrategy redirectStrategy = new LaxRedirectStrategy();
+CloseableHttpClient httpclient = HttpClients.custom()
+        .setRedirectStrategy(redirectStrategy)
+        .build();

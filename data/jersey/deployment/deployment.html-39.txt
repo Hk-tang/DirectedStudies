@@ -1,0 +1,3 @@
+
+gogo$ install file:///path/to/file/bundle.jar
+Bundle ID: 303

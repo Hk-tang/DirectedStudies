@@ -1,0 +1,6 @@
+
+CloseableHttpResponse response = <...>
+HttpEntity entity = response.getEntity();
+if (entity != null) {
+    entity = new BufferedHttpEntity(entity);
+}

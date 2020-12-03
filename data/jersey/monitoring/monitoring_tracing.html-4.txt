@@ -1,0 +1,3 @@
+target.path("resource").request()
+        .post(Entity.entity("post", MediaType.TEXT_PLAIN_TYPE));
+    target.path("resource").request().get();

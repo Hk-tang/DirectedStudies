@@ -1,0 +1,5 @@
+
+ListenableFuture<Response> response = client.target("http://jersey.java.net")
+                                            .request()
+                                            .rx(RxListenableFutureInvoker.class)
+                                            .get();

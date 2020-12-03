@@ -1,0 +1,2 @@
+Address[] addresses = {new Address("Long Street 1", "Short Village")};
+Contact contact = new Contact(2, "Bob", Arrays.asList(addresses));

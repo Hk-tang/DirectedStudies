@@ -1,0 +1,3 @@
+
+examples$ cd osgi-http-service/bundle
+bundle$ mvn clean package

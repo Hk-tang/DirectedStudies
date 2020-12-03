@@ -1,0 +1,19 @@
+{
+   "description" : "Jersey is the open source (under dual EPL+GPL license) JAX-RS 2.1 (JSR 370) production quality Reference Implementation for building RESTful Web services.",
+   "id" : 1,
+   "name" : "Jersey",
+   "tasks" : [ {
+      "description" : "Entity Data Filtering",
+      "id" : 1,
+      "name" : "ENT_FLT"
+   }, {
+      "description" : "OAuth 1 + 2",
+      "id" : 2,
+      "name" : "OAUTH"
+   } ],
+   "users" : [ {
+      "email" : "very@secret.com",
+      "id" : 1,
+      "name" : "Jersey Robot"
+   } ]
+}

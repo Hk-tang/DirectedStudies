@@ -1,0 +1,10 @@
+package com.example;
+
+@Path("foo")
+public class Foo {
+
+    @GET
+    public Viewable get() {
+        return new Viewable("index.foo", "FOO");
+    }
+}

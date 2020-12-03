@@ -1,0 +1,19 @@
+@StandardUser
+class User {
+
+    @NotNull
+    private String firstName;
+
+    ...
+}
+
+
+@Path("/")
+class MyResourceClass {
+
+    @POST
+    @Consumes("application/xml")
+    public void registerUser(@Valid User user) {
+        ...
+    }
+}

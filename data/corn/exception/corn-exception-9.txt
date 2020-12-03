@@ -1,0 +1,3 @@
+//Some where in your app begins
+ExceptionCatcher.addCommonListener(notifyCriticalBusinessExceptionsListener );
+ExceptionCatcher.addDefaultCommand(logCommand);

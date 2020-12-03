@@ -1,0 +1,1 @@
+mvn test -Djersey.test.host=myhost.org -Djersey.config.test.container.port=8080

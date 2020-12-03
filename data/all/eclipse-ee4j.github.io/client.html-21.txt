@@ -1,0 +1,6 @@
+InputStream in = response.readEntity(InputStream.class);
+
+... // Read from the stream
+
+in.close();
+            

@@ -1,0 +1,5 @@
+<select name="..." multiple>}}}
+  <option value="...">...</option>}}}
+  <option value="...">...</option>}}}
+  ...
+</select>

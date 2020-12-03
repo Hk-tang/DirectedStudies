@@ -1,0 +1,2 @@
+<code><span class="n">adb</span> <span class="n">shell</span> <span class="n">setprop</span> <span class="n">log</span><span class="o">.</span><span class="na">tag</span><span class="o">.</span><span class="na">HttpTransport</span> <span class="no">DEBUG</span>
+</code>

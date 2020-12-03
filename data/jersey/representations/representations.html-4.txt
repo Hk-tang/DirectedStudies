@@ -1,0 +1,9 @@
+@Path("items/{itemid}/")
+public Item getItem(@PathParam("itemid") String itemid) {
+  Item i = getItems().get(itemid);
+  if (i == null) {
+    throw new CustomNotFoundException("Item, " + itemid + ", is not found");
+  }
+
+  return i;
+}

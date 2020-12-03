@@ -1,0 +1,11 @@
+<code><span class="c"># Properties file which configures the operation of the JDK logging facility.
+# The system will look for this config file to be specified as a system property:
+# -Djava.util.logging.config.file=${project_loc:googleplus-simple-cmdline-sample}/logging.properties
+</span>
+<span class="c"># Set up the console handler (uncomment "level" to show more fine-grained messages)
+</span><span class="py">handlers</span> <span class="p">=</span> <span class="s">java.util.logging.ConsoleHandler</span>
+<span class="py">java.util.logging.ConsoleHandler.level</span> <span class="p">=</span> <span class="s">CONFIG</span>
+
+<span class="c"># Set up logging of HTTP requests and responses (uncomment "level" to show)
+</span><span class="py">com.google.api.client.http.level</span> <span class="p">=</span> <span class="s">CONFIG</span>
+</code>

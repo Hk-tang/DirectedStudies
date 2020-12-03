@@ -1,0 +1,3 @@
+
+                                <dependency> <groupId>org.glassfish.jersey.core</groupId> <artifactId>jersey-common</artifactId>
+                                <version>${pre-2.16-version}</version> </dependency>

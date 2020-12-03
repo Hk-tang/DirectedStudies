@@ -1,0 +1,5 @@
+
+HttpClient httpClient = HttpClientBuilder.create().setMaxConnPerRoute(5).build();
+ExecutorService executorService = Executors.newFixedThreadPool(5);
+FutureRequestExecutionService futureRequestExecutionService =
+    new FutureRequestExecutionService(httpClient, executorService);

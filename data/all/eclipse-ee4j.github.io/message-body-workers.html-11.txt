@@ -1,0 +1,1 @@
+jersey.config.workers.legacyOrdering=true

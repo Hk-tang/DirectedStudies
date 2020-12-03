@@ -1,0 +1,14 @@
+        TestTypeNotSupportedBeanA bean = new TestTypeNotSupportedBeanA(3);
+        JsonConverter cnv = new JsonConverter();
+        JsTypeObject jsObj = null;
+        try {
+            jsObj = cnv.toTargetType(bean);
+        } catch (ConversionException e) {
+        }
+        assertNull(jsObj);
+        JsonConverter.registerConverter(CnvTestTypeNotSupportedBeanA.class);
+        try {
+            jsObj = cnv.toTargetType(bean);
+        } catch (ConversionException e) {
+        }
+        assertNotNull(jsObj);

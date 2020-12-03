@@ -1,0 +1,5 @@
+@GET
+@Path("{implicit-view-path-parameter}")
+public Viewable get(@PathParameter("{implicit-view-path-parameter}") String template) {
+    return new Viewable(template, this);
+}

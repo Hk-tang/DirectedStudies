@@ -1,0 +1,4 @@
+final Client client = ClientBuilder.newBuilder()
+        .register(MyObjectMapperProvider.class)  // No need to register this provider if no special configuration is required.
+        .register(JacksonFeature.class)
+        .build();

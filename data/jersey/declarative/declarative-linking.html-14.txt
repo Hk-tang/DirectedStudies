@@ -1,0 +1,3 @@
+public class OrderPage extends Page {
+    private List<Order> orders;
+}

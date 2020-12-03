@@ -1,0 +1,3 @@
+200
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><myBean>
+<anyString>Hello World!</anyString><anyNumber>42</anyNumber></myBean>

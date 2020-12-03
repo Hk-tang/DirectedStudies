@@ -1,0 +1,3 @@
+
+CloseableHttpClient httpClient = <...>
+httpClient.close();

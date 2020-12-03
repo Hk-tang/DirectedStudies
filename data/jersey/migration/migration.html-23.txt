@@ -1,0 +1,4 @@
+Client client = Client.create(); WebResource
+                        webResource = client.resource(restURL); ClientResponse response = webResource.post(ClientResponse.class,
+                        "payload");
+                    

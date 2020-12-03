@@ -1,0 +1,1 @@
+ServiceResponse response = CallDelegator.execute( new ServiceRequest("HelloWorld", "sayHelloWorld"));

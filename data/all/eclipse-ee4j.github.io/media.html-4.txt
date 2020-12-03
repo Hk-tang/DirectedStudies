@@ -1,0 +1,1 @@
+MyJaxbBean myBean = new MyJaxbBean("Agamemnon", 32);

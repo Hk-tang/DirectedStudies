@@ -1,0 +1,2 @@
+
+asadmin>  create-jvm-options --target server -Dglassfish.osgi.start.level.final=3

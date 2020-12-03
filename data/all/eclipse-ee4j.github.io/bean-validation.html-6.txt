@@ -1,0 +1,25 @@
+@Path("/")
+class MyResourceClass {
+
+    @NotNull
+    @FormParam("firstName")
+    private String firstName;
+
+    @NotNull
+    @FormParam("lastName")
+    private String lastName;
+
+    private String email;
+
+    @FormParam("email")
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Email
+    public String getEmail() {
+        return email;
+    }
+
+    ...
+}

@@ -1,0 +1,19 @@
+<code><span class="nc">HttpTransport</span> <span class="n">transport</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MockHttpTransport</span><span class="o">()</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">LowLevelHttpRequest</span> <span class="nf">buildRequest</span><span class="o">(</span><span class="nc">String</span> <span class="n">method</span><span class="o">,</span> <span class="nc">String</span> <span class="n">url</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">MockLowLevelHttpRequest</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="nc">LowLevelHttpResponse</span> <span class="nf">execute</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+        <span class="nc">MockLowLevelHttpResponse</span> <span class="n">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MockLowLevelHttpResponse</span><span class="o">();</span>
+        <span class="n">response</span><span class="o">.</span><span class="na">addHeader</span><span class="o">(</span><span class="s">"custom_header"</span><span class="o">,</span> <span class="s">"value"</span><span class="o">);</span>
+        <span class="n">response</span><span class="o">.</span><span class="na">setStatusCode</span><span class="o">(</span><span class="mi">404</span><span class="o">);</span>
+        <span class="n">response</span><span class="o">.</span><span class="na">setContentType</span><span class="o">(</span><span class="nc">Json</span><span class="o">.</span><span class="na">MEDIA_TYPE</span><span class="o">);</span>
+        <span class="n">response</span><span class="o">.</span><span class="na">setContent</span><span class="o">(</span><span class="s">"{\"error\":\"not found\"}"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">};</span>
+  <span class="o">}</span>
+<span class="o">};</span>
+<span class="nc">HttpRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="n">transport</span><span class="o">.</span><span class="na">createRequestFactory</span><span class="o">().</span><span class="na">buildGetRequest</span><span class="o">(</span><span class="nc">HttpTesting</span><span class="o">.</span><span class="na">SIMPLE_GENERIC_URL</span><span class="o">);</span>
+<span class="nc">HttpResponse</span> <span class="n">response</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span>
+</code>

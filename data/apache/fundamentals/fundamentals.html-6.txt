@@ -1,0 +1,13 @@
+
+HttpResponse response = new BasicHttpResponse(HttpVersion.HTTP_1_1, 
+    HttpStatus.SC_OK, "OK");
+response.addHeader("Set-Cookie", 
+    "c1=a; path=/; domain=localhost");
+response.addHeader("Set-Cookie", 
+    "c2=b; path=\"/\", c3=c; domain=\"localhost\"");
+Header h1 = response.getFirstHeader("Set-Cookie");
+System.out.println(h1);
+Header h2 = response.getLastHeader("Set-Cookie");
+System.out.println(h2);
+Header[] hs = response.getHeaders("Set-Cookie");
+System.out.println(hs.length);

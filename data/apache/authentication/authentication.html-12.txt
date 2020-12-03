@@ -1,0 +1,7 @@
+
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\
+Value Name: allowtgtsessionkey
+Value Type: REG_DWORD
+Value: 0x01
+
+            

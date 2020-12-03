@@ -1,0 +1,20 @@
+@Path("session")
+public class PerSessionResource {
+
+    @SessionInject HttpSession httpSession;
+
+    AtomicInteger counter = new AtomicInteger();
+
+    @GET
+    @Path("id")
+    public String getSession() {
+        counter.incrementAndGet();
+        return httpSession.getId();
+    }
+
+    @GET
+    @Path("count")
+    public int getSessionRequestCount() {
+        return counter.incrementAndGet();
+    }
+}

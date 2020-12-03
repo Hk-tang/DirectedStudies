@@ -1,0 +1,4 @@
+Client client = Client.create(); WebResource
+                        webResource = client.resource(restURL).path("myresource/{param}"); String result =
+                        webResource.pathParam("param", "value").get(String.class);
+                    

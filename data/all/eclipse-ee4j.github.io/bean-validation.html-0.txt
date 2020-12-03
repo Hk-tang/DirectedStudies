@@ -1,0 +1,5 @@
+<dependency>
+    <groupId>org.glassfish.jersey.ext</groupId>
+    <artifactId>jersey-bean-validation</artifactId>
+    <version>3.0.0</version>
+</dependency>

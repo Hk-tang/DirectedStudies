@@ -1,0 +1,6 @@
+
+ClientConfig config = new ClientConfig();
+config.register(PlanetJAXBContextProvider.class);
+
+Client client = ClientBuilder.newClient(config);
+                

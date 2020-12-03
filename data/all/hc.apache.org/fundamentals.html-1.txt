@@ -1,0 +1,3 @@
+
+HttpGet httpget = new HttpGet(
+     "http://www.google.com/search?hl=en&q=httpclient&btnG=Google+Search&aq=f&oq=");

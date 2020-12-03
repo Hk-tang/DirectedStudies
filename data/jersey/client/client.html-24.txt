@@ -1,0 +1,3 @@
+ClientConfig clientConfig = new ClientConfig();
+clientConfig.connectorProvider(new GrizzlyConnectorProvider());
+Client client = ClientBuilder.newClient(clientConfig);

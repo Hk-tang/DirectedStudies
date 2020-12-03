@@ -1,0 +1,10 @@
+// MediaType of the body part will be derived from the file.
+final FileDataBodyPart filePart = new FileDataBodyPart("my_pom", new File("pom.xml"));
+
+final FormDataMultiPart multipart = new FormDataMultiPart()
+    .field("foo", "bar")
+    .bodyPart(filePart);
+
+final WebTarget target = // Create WebTarget.
+final Response response = target.request()
+    .post(Entity.entity(multipart, multipart.getMediaType()));

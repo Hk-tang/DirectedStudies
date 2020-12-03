@@ -1,0 +1,8 @@
+@Path("basket")
+public ShoppingBasketResource get(@Context SecurityContext sc) {
+    if (sc.isUserInRole("PreferredCustomer") {
+        return new PreferredCustomerShoppingBasketResource();
+    } else {
+        return new ShoppingBasketResource();
+    }
+}

@@ -1,0 +1,2 @@
+        ResourceConfig config = new ResourceConfig(HelloWorldResource.class);
+        config.register(LoggingFeature.class);

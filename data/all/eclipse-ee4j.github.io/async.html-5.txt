@@ -1,0 +1,2 @@
+final Future<Response> responseFuture = target().path("http://example.com/resource/")
+        .request().async().get();

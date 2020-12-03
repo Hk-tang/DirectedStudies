@@ -1,0 +1,12 @@
+public class Page {
+    private int number;
+
+    private int size;
+
+    private boolean isPreviousPageAvailable;
+
+    private boolean isNextPageAvailable;
+
+    @InjectLinks
+    private List<Link> links;
+}

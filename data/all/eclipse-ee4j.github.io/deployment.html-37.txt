@@ -1,0 +1,3 @@
+Web-ContextPath: helloworld
+Webapp-Context: helloworld
+Bundle-ClassPath: WEB-INF/classese

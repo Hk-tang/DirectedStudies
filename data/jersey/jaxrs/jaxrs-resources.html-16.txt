@@ -1,0 +1,5 @@
+@POST
+public void post(@BeanParam MyBeanParam beanParam, String entity) {
+    final String pathParam = beanParam.getPathParam(); // contains injected path parameter "p"
+    ...
+}

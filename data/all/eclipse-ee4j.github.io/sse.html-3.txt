@@ -1,0 +1,39 @@
+...
+import jakarta.ws.rs.sse.Sse;
+import jakarta.ws.rs.sse.SseEventSink;
+import jakarta.ws.rs.sse.SseBroadcaster;
+...
+
+@Singleton
+@Path("broadcast")
+public static class BroadcasterResource {
+    private Sse sse;
+    private SseBroadcaster broadcaster;
+
+    public BroadcasterResource(@Context final Sse sse) {
+        this.sse = sse;
+        this.broadcaster = sse.newBroadcaster();
+    }
+
+    @POST
+    @Produces(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.TEXT_PLAIN)
+    public String broadcastMessage(String message) {
+        final OutboundSseEvent event = sse.newEventBuilder()
+            .name("message")
+            .mediaType(MediaType.TEXT_PLAIN_TYPE)
+            .data(String.class, message)
+            .build();
+
+        broadcaster.broadcast(event);
+
+        return "Message '" + message + "' has been broadcast.";
+    }
+
+    @GET
+    @Produces(MediaType.SERVER_SENT_EVENTS)
+    public void listenToBroadcast(@Context SseEventSink eventSink) {
+        this.broadcaster.register(eventSink);
+    }
+}
+                    

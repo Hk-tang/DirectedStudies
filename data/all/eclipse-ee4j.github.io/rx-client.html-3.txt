@@ -1,0 +1,4 @@
+Response response = ClientBuilder.newClient()
+        .target("http://example.com/resource")
+        .request()
+        .get();

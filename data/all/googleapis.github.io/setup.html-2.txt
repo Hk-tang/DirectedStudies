@@ -1,0 +1,23 @@
+<code><span class="nt"><dependency></span>
+  <span class="nt"><groupId></span>com.google.http-client<span class="nt"></groupId></span>
+  <span class="nt"><artifactId></span>google-http-client<span class="nt"></artifactId></span>
+  <span class="nt"><exclusions></span>
+    <span class="nt"><exclusion></span>
+      <span class="nt"><artifactId></span>xpp3<span class="nt"></artifactId></span>
+      <span class="nt"><groupId></span>xpp3<span class="nt"></groupId></span>
+    <span class="nt"></exclusion></span>
+    <span class="nt"><exclusion></span>
+      <span class="nt"><artifactId></span>httpclient<span class="nt"></artifactId></span>
+      <span class="nt"><groupId></span>org.apache.httpcomponents<span class="nt"></groupId></span>
+    <span class="nt"></exclusion></span>
+    <span class="nt"><exclusion></span>
+      <span class="nt"><artifactId></span>junit<span class="nt"></artifactId></span>
+      <span class="nt"><groupId></span>junit<span class="nt"></groupId></span>
+    <span class="nt"></exclusion></span>
+    <span class="nt"><exclusion></span>
+      <span class="nt"><artifactId></span>android<span class="nt"></artifactId></span>
+      <span class="nt"><groupId></span>com.google.android<span class="nt"></groupId></span>
+    <span class="nt"></exclusion></span>
+  <span class="nt"></exclusions></span>
+<span class="nt"></dependency></span>
+</code>

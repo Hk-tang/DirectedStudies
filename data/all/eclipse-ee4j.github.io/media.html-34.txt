@@ -1,0 +1,5 @@
+// Create JAX-RS application.
+final Application application = new ResourceConfig()
+        .packages("org.glassfish.jersey.examples.jettison")
+        .register(JaxbContextResolver.class)  // No need to register this provider if no special configuration is required.
+        .register(JettisonFeature.class);

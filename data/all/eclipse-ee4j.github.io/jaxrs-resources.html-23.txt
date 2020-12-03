@@ -1,0 +1,10 @@
+import org.glassfish.jersey.server.model.Resource;
+
+@Path("/item")
+public class ItemResource {
+
+    @Path("content")
+    public Resource getItemContentResource() {
+        return Resource.from(ItemContentSingletonResource.class);
+    }
+}

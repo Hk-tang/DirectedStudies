@@ -1,0 +1,11 @@
+
+UserTokenHandler userTokenHandler = new UserTokenHandler() {
+
+    public Object getUserToken(HttpContext context) {
+        return context.getAttribute("my-token");
+    }
+
+};
+CloseableHttpClient httpclient = HttpClients.custom()
+        .setUserTokenHandler(userTokenHandler)
+        .build();

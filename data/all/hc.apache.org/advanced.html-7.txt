@@ -1,0 +1,13 @@
+
+private final class OkidokiHandler implements ResponseHandler<Boolean> {
+    public Boolean handleResponse(
+            final HttpResponse response) throws ClientProtocolException, IOException {
+        return response.getStatusLine().getStatusCode() == 200;
+    }
+}
+
+HttpRequestFutureTask<Boolean> task = futureRequestExecutionService.execute(
+    new HttpGet("http://www.google.com"), HttpClientContext.create(),
+    new OkidokiHandler());
+// blocks until the request complete and then returns true if you can connect to Google
+boolean ok=task.get();

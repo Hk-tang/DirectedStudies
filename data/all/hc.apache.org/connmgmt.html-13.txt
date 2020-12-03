@@ -1,0 +1,6 @@
+
+HttpHost proxy = new HttpHost("someproxy", 8080);
+DefaultProxyRoutePlanner routePlanner = new DefaultProxyRoutePlanner(proxy);
+CloseableHttpClient httpclient = HttpClients.custom()
+        .setRoutePlanner(routePlanner)
+        .build();

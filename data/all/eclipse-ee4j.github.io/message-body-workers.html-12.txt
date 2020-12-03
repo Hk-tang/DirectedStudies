@@ -1,0 +1,40 @@
+@Path("workers")
+public static class WorkersResource {
+
+    @Context
+    private MessageBodyWorkers workers;
+
+    @GET
+    @Produces("application/xml")
+    public String getMyBeanAsString() {
+
+        final MyBean myBean = new MyBean("Hello World!", 42);
+
+        // buffer into which myBean will be serialized
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+
+        // get most appropriate MBW
+        final MessageBodyWriter<MyBean> messageBodyWriter =
+                workers.getMessageBodyWriter(MyBean.class, MyBean.class,
+                        new Annotation[]{}, MediaType.APPLICATION_XML_TYPE);
+
+        try {
+            // use the MBW to serialize myBean into baos
+            messageBodyWriter.writeTo(myBean,
+                MyBean.class, MyBean.class, new Annotation[] {},
+                MediaType.APPLICATION_XML_TYPE, new MultivaluedHashMap<String, Object>(),
+                baos);
+        } catch (IOException e) {
+            throw new RuntimeException(
+                "Error while serializing MyBean.", e);
+        }
+
+        final String stringXmlOutput = baos.toString();
+        // stringXmlOutput now contains XML representation:
+        // "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+        // <myBean><anyString>Hello World!</anyString>
+        // <anyNumber>42</anyNumber></myBean>"
+
+        return stringXmlOutput;
+    }
+}

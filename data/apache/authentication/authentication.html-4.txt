@@ -1,0 +1,20 @@
+
+CredentialsProvider credsProvider = new BasicCredentialsProvider();
+credsProvider.setCredentials(
+    new AuthScope("somehost", AuthScope.ANY_PORT), 
+    new UsernamePasswordCredentials("u1", "p1"));
+credsProvider.setCredentials(
+    new AuthScope("somehost", 8080), 
+    new UsernamePasswordCredentials("u2", "p2"));
+credsProvider.setCredentials(
+    new AuthScope("otherhost", 8080, AuthScope.ANY_REALM, "ntlm"), 
+    new UsernamePasswordCredentials("u3", "p3"));
+
+System.out.println(credsProvider.getCredentials(
+    new AuthScope("somehost", 80, "realm", "basic")));
+System.out.println(credsProvider.getCredentials(
+    new AuthScope("somehost", 8080, "realm", "basic")));
+System.out.println(credsProvider.getCredentials(
+    new AuthScope("otherhost", 8080, "realm", "basic")));
+System.out.println(credsProvider.getCredentials(
+    new AuthScope("otherhost", 8080, null, "ntlm")));

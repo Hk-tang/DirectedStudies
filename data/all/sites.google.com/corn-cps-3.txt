@@ -1,0 +1,6 @@
+List classes = CPScanner.scanClasses(new CombinedFilter()
+                .appendFilter(new ResourceFilter().packageName(packageName))
+                .appendFilter(
+                        new ClassFilter()
+                                .annotation(SampleAnnotation.class))
+                .combineWithAnd());

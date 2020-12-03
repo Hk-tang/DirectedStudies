@@ -1,0 +1,13 @@
+public static class MyBinder extends AbstractBinder
+                        {
+
+                        @Override protected void configure() { // request scope binding
+                        bind(MyInjectablePerRequest.class).to(MyInjectablePerRequest.class).in(RequestScoped.class); // singleton
+                        binding bind(MyInjectableSingleton.class).in(Singleton.class); // singleton instance binding bind(new
+                        MyInjectableSingleton()).to(MyInjectableSingleton.class); }
+
+                        }
+
+                        // register module to ResourceConfig (can be done also in constructor) ResourceConfig rc = new
+                        ResourceConfig(); rc.addClasses(/* ... */); rc.addBinders(new MyBinder());
+                    

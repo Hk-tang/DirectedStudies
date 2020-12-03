@@ -1,0 +1,14 @@
+import jakarta.inject.Singleton;
+
+@Path("/item")
+public class ItemResource {
+    @Path("content")
+    public Class<ItemContentSingletonResource> getItemContentResource() {
+        return ItemContentSingletonResource.class;
+    }
+}
+
+@Singleton
+public class ItemContentSingletonResource {
+    // this class is managed in the singleton life cycle
+}

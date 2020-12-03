@@ -1,0 +1,8 @@
+@Path("/item")
+public class ItemResource {
+
+    @Path("/")
+    public Object getItemContentResource() {
+        return new AnyResource();
+    }
+}

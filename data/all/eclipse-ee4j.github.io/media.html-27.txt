@@ -1,0 +1,10 @@
+{
+   "contact":{
+      "example.id":2,
+      "name":"Bob",
+      "addresses":{
+         "street":"Long Street 1",
+         "town":"Short Village"
+      }
+   }
+}

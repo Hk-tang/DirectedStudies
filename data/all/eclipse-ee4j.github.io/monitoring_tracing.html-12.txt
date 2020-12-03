@@ -1,0 +1,12 @@
+  1 $ curl -i http://localhost:9998/items/3/tracks/0 -H X-Jersey-Tracing-Accept:whatever
+  2 
+  3 ...
+  4 X-Jersey-Tracing-033: WI          [ 0.00 / 23.39 ms |  0.02 %] [org.glassfish.jersey.server.mvc.internal.TemplateMethodInterceptor @141bcd49 #4000] BEFORE context.proceed()
+  5 X-Jersey-Tracing-034: WI          [ 0.01 / 23.42 ms |  0.02 %] [org.glassfish.jersey.filter.LoggingFilter @2d427def #-2147483648] BEFORE context.proceed()
+  6 X-Jersey-Tracing-035: MBW         [ ---- / 23.45 ms |  ---- %] Find MBW for type=[org.glassfish.jersey.server.mvc.internal.ImplicitViewable] genericType=[org.glassfish.jersey.server.mvc.internal.ImplicitViewable] mediaType=[[jakarta.ws.rs.core.MediaType @7bfbfeae]] annotations=[]
+  7 X-Jersey-Tracing-036: MBW         [ ---- / 23.52 ms |  ---- %] [org.glassfish.jersey.server.mvc.internal.ViewableMessageBodyWriter @78b353d4] IS writeable
+  8 X-Jersey-Tracing-037: MVC         [ ---- / 24.05 ms |  ---- %] Forwarding view to JSP page [/org/glassfish/jersey/examples/bookstore/webapp/resource/Track/index.jsp], model [org.glassfish.jersey.examples.bookstore.webapp.resource.Track @3937f594]
+  9 X-Jersey-Tracing-038: MBW         [ 1.09 / 24.63 ms |  4.39 %] WriteTo by [org.glassfish.jersey.server.mvc.internal.ViewableMessageBodyWriter @78b353d4]
+ 10 X-Jersey-Tracing-039: WI          [ 0.00 / 24.67 ms |  0.01 %] [org.glassfish.jersey.filter.LoggingFilter @2d427def #-2147483648] AFTER context.proceed()
+ 11 X-Jersey-Tracing-040: WI          [ 0.00 / 24.70 ms |  0.01 %] [org.glassfish.jersey.server.mvc.internal.TemplateMethodInterceptor @141bcd49 #4000] AFTER context.proceed()
+ 12 ...

@@ -1,0 +1,9 @@
+
+                            Client client = ClientBuilder.newClient();
+                            System.setProperty("sun.net.http.allowRestrictedHeaders", "true");
+
+                            Response response = client.target(yourUri).path(yourPath).request().
+                            header("Origin", "http://example.com").
+                            header("Access-Control-Request-Method", "POST").
+                            get();
+                        

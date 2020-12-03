@@ -1,0 +1,8 @@
+
+                /**
+                * The method invoked before the request starts.
+                * @param requestContext the request context shared with
+                * ClientRequestFilter.
+                */
+                void beforeRequest(ClientRequestContext requestContext);
+            

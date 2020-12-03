@@ -1,0 +1,12 @@
+@Path("smooth")
+@GET
+public Response smooth(
+    @DefaultValue("2") @QueryParam("step") int step,
+    @DefaultValue("true") @QueryParam("min-m") boolean hasMin,
+    @DefaultValue("true") @QueryParam("max-m") boolean hasMax,
+    @DefaultValue("true") @QueryParam("last-m") boolean hasLast,
+    @DefaultValue("blue") @QueryParam("min-color") ColorParam minColor,
+    @DefaultValue("green") @QueryParam("max-color") ColorParam maxColor,
+    @DefaultValue("red") @QueryParam("last-color") ColorParam lastColor) {
+    ...
+}

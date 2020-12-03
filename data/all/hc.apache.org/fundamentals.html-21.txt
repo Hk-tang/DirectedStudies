@@ -1,0 +1,6 @@
+
+StringEntity entity = new StringEntity("important message",
+        ContentType.create("plain/text", Consts.UTF_8));
+entity.setChunked(true);
+HttpPost httppost = new HttpPost("http://localhost/acrtion.do");
+httppost.setEntity(entity);

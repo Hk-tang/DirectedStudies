@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<planet>
+    <id>1</id>
+    <name>Earth</name>
+    <radius>1.0</radius>
+</planet>

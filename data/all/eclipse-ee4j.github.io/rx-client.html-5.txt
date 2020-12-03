@@ -1,0 +1,5 @@
+CompletionStage<Response> response = ClientBuilder.newClient()
+        .target("http://example.com/resource")
+        .request()
+        .rx()
+        .get();

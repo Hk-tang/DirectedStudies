@@ -1,0 +1,7 @@
+final FormDataMultiPart multipart = new FormDataMultiPart()
+    .field("hello", "hello")
+    .field("xml", new JaxbBean("xml"))
+    .field("json", new JaxbBean("json"), MediaType.APPLICATION_JSON_TYPE);
+
+final WebTarget target = // Create WebTarget.
+final Response response = target.request().post(Entity.entity(multipart, multipart.getMediaType()));

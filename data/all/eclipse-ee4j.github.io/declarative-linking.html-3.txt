@@ -1,0 +1,12 @@
+@Path("widgets")
+public class WidgetsResource {
+    @GET
+    public Widgets get() {
+        return new Widgets();
+    }
+}
+
+public class Widgets {
+    @InjectLink(resource=WidgetsResource.class)
+    URI u;
+}

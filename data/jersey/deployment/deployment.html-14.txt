@@ -1,0 +1,2 @@
+HttpHandler endpoint = RuntimeDelegate.getInstance()
+        .createEndpoint(new MyApplication(), HttpHandler.class);

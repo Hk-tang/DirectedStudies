@@ -1,0 +1,7 @@
+        String= {"1","2"};
+        JsTypeObject jsObj =  converter.toTargetType(strArr);
+        Object obj = converter.toJava(jsObj);
+        assertNotNull(obj);
+        assertTrue(obj.getClass().isArray());
+        assertEquals(Array.getLength(obj),strArr.length);
+        assertEquals(Array.get(obj, 00Array.get(obj, 11

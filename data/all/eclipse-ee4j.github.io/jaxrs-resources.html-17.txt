@@ -1,0 +1,6 @@
+@POST
+public void post(@BeanParam MyBeanParam beanParam, @BeanParam AnotherBean anotherBean, @PathParam("p") pathParam,
+String entity) {
+    // beanParam.getPathParam() == pathParam
+    ...
+}

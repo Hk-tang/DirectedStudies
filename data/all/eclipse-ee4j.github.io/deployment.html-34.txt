@@ -1,0 +1,3 @@
+
+asadmin> osgi lb
+... list of bundles ...

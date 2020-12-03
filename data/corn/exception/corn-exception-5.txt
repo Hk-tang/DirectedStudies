@@ -1,0 +1,1 @@
+ExceptionBuilder.with(IllegalArgumentException.class).fill(, "Hello", "world").throwIt();

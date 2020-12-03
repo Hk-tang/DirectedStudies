@@ -1,0 +1,4 @@
+Client client = Client.create(); WebResource
+                        webResource = client.resource(restURL).accept("text/plain"); ClientResponse response =
+                        webResource.get(ClientResponse.class);
+                    

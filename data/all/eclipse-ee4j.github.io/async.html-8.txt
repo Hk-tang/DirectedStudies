@@ -1,0 +1,8 @@
+final Response response = target().path("http://example.com/resource/")
+        .request().get();
+final ChunkedInput<String> chunkedInput =
+        response.readEntity(new GenericType<ChunkedInput<String>>() {});
+String chunk;
+while ((chunk = chunkedInput.read()) != null) {
+    System.out.println("Next chunk received: " + chunk);
+}

@@ -1,0 +1,10 @@
+@Path("/cdibean")
+public class CdiBeanResource {
+    @Inject MyOtherCdiBean bean;  // CDI injected bean
+
+    @GET
+    @Produces("text/plain")
+    public String getIt() {
+        return bean.getIt();
+    }
+}

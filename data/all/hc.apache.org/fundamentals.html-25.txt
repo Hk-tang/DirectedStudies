@@ -1,0 +1,7 @@
+
+HttpContext context = <...>
+HttpClientContext clientContext = HttpClientContext.adapt(context);
+HttpHost target = clientContext.getTargetHost();
+HttpRequest request = clientContext.getRequest();
+HttpResponse response = clientContext.getResponse();
+RequestConfig config = clientContext.getRequestConfig();

@@ -1,0 +1,5 @@
+Response resp =
+    client.target("http://my-serviceprovider.org/rest/foo/bar")
+        .request()
+        .property(OAuth1ClientSupport.OAUTH_PROPERTY_ACCESS_TOKEN, storedToken)
+        .get();

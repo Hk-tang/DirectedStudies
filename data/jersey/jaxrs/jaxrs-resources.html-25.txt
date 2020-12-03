@@ -1,0 +1,13 @@
+@Path("resource")
+@Singleton
+public static class MySingletonResource {
+
+    @QueryParam("query")
+    String param; // WRONG: initialization of application will fail as you cannot
+                  // inject request specific parameters into a singleton resource.
+
+    @GET
+    public String get() {
+        return "query param: " + param;
+    }
+}

@@ -1,0 +1,6 @@
+ClientBuilder.newClient(new ClientConfig()
+    // The line below that registers JSON-Binding feature can be
+    // omitted if FEATURE_AUTO_DISCOVERY_DISABLE is not disabled.
+    .register(JsonBindingFeature.class)
+    .register(JsonbContextResolver.class)
+);

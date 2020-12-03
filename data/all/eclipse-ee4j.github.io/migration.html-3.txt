@@ -1,0 +1,3 @@
+
+                                @Path("/") @Produces("text/html;qs=5") // wrong 'qs' value public class Bookstore { ... }
+                            

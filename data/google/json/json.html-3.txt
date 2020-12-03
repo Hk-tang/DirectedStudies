@@ -1,0 +1,8 @@
+<code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">VideoId</span> <span class="o">{</span>
+  <span class="nd">@Key</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="n">kind</span><span class="o">;</span>
+
+  <span class="nd">@Key</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="n">videoId</span><span class="o">;</span>
+<span class="o">}</span>
+</code>

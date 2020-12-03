@@ -1,0 +1,1 @@
+HttpClient client = new HttpClient(new URI("http://localhost:8080/test"));

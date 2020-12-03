@@ -1,0 +1,15 @@
+public class InjectingConstraintValidatorFactory implements ConstraintValidatorFactory {
+
+    @Context
+    private ResourceContext resourceContext;
+
+    @Override
+    public <T extends ConstraintValidator<?, ?>> T getInstance(final Class<T> key) {
+        return resourceContext.getResource(key);
+    }
+
+    @Override
+    public void releaseInstance(final ConstraintValidator<?, ?> instance) {
+        // NOOP
+    }
+}

@@ -1,0 +1,11 @@
+gogo$ lb
+...
+303 | Installed  |    1| jersey-examples-osgi-http-service-bundle (2.5.0.SNAPSHOT)
+gogo$ start 303
+
+org.osgi.framework.BundleException: Unresolved constraint in bundle
+org.glassfish.jersey.examples.osgi-http-service.bundle [303]: Unable to resolve 308.0: missing requirement
+[303.0] osgi.wiring.package; (&(osgi.wiring.package=org.glassfish.jersey.servlet)
+(version>=2.5.0)(!(version>=3.0.0)))
+
+gogo$

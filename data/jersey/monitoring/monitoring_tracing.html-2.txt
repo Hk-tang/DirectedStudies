@@ -1,0 +1,12 @@
+@Path("resource")
+public class TestResource {
+    @GET
+    public String getSomething() {
+        return "get";
+    }
+
+    @POST
+    public String postSomething(String entity) {
+        return "post";
+    }
+}

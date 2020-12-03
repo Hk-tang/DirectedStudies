@@ -1,0 +1,3 @@
+ResourceConfig resourceConfig =
+            new ResourceConfig(TestResource.class, MyApplicationEventListener.class)
+            .setApplicationName("my-monitored-application");

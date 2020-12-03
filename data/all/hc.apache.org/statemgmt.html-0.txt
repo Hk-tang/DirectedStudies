@@ -1,0 +1,8 @@
+
+BasicClientCookie cookie = new BasicClientCookie("name", "value");
+// Set effective domain and path attributes
+cookie.setDomain(".mycompany.com");
+cookie.setPath("/");
+// Set attributes exactly as sent by the server
+cookie.setAttribute(ClientCookie.PATH_ATTR, "/");
+cookie.setAttribute(ClientCookie.DOMAIN_ATTR, ".mycompany.com");

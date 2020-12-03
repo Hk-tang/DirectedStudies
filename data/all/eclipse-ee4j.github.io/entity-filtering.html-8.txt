@@ -1,0 +1,15 @@
+@Path("projects")
+@Produces("application/json")
+public class ProjectsResource {
+
+    @GET
+    @Path("{id}")
+    public Project getProject(@PathParam("id") final Long id) {
+        return getDetailedProject(id);
+    }
+
+    @GET
+    public List<Project> getProjects() {
+        return getDetailedProjects();
+    }
+}

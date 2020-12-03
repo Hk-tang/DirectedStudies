@@ -1,0 +1,128 @@
+<code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">ListResponse</span> <span class="o">{</span>
+  <span class="nd">@Key</span><span class="o">(</span><span class="s">"items"</span><span class="o">)</span>
+  <span class="kd">private</span> <span class="nc">List</span><span class="o"><</span><span class="nc">SearchResult</span><span class="o">></span> <span class="n">searchResults</span><span class="o">;</span>
+
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="nc">PageInfo</span> <span class="n">pageInfo</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nc">List</span><span class="o"><</span><span class="nc">SearchResult</span><span class="o">></span> <span class="nf">getSearchResults</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">searchResults</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nc">PageInfo</span> <span class="nf">getPageInfo</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">pageInfo</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">PageInfo</span> <span class="o">{</span>
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="kt">long</span> <span class="n">totalResults</span><span class="o">;</span>
+
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="kt">long</span> <span class="n">resultsPerPage</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="kt">long</span> <span class="nf">getTotalResults</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">totalResults</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">long</span> <span class="nf">getResultsPerPage</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">resultsPerPage</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">SearchResult</span> <span class="o">{</span>
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">kind</span><span class="o">;</span>
+
+  <span class="nd">@Key</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span>
+  <span class="kd">private</span> <span class="nc">VideoId</span> <span class="n">videoId</span><span class="o">;</span>
+
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="nc">Snippet</span> <span class="n">snippet</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getKind</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">kind</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nc">VideoId</span> <span class="nf">getId</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">videoId</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nc">Snippet</span> <span class="nf">getSnippet</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">snippet</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">VideoId</span> <span class="o">{</span>
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">kind</span><span class="o">;</span>
+
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">videoId</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getKind</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">kind</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getVideoId</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">videoId</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Snippet</span> <span class="o">{</span>
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">publishedAt</span><span class="o">;</span>
+
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">channelId</span><span class="o">;</span>
+
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
+
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">description</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getPublishedAt</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">publishedAt</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getChannelId</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">channelId</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getTitle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">title</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getDescription</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">description</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nc">Map</span><span class="o"><</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Thumbnail</span><span class="o">></span> <span class="nf">getThumbnails</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">thumbnails</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Thumbnail</span> <span class="o">{</span>
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">url</span><span class="o">;</span>
+
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="kt">long</span> <span class="n">width</span><span class="o">;</span>
+
+  <span class="nd">@Key</span>
+  <span class="kd">private</span> <span class="kt">long</span> <span class="n">height</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getUrl</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">url</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">long</span> <span class="nf">getWidth</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">width</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">long</span> <span class="nf">getHeight</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">height</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code>

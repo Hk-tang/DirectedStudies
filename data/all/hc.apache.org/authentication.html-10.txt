@@ -1,0 +1,12 @@
+
+[libdefaults]
+    default_realm = AD.EXAMPLE.NET
+    udp_preference_limit = 1
+[realms]
+    AD.EXAMPLE.NET = {
+        kdc = KDC.AD.EXAMPLE.NET
+    }
+[domain_realms]
+.ad.example.net=AD.EXAMPLE.NET
+ad.example.net=AD.EXAMPLE.NET
+

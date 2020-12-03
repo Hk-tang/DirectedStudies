@@ -1,0 +1,3 @@
+Reloader reloader = new Reloader();
+                            resourceConfig.getProperties().put(ResourceConfig.PROPERTY_CONTAINER_NOTIFIER, reloader);
+                        

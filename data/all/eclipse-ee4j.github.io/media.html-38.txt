@@ -1,0 +1,6 @@
+@GET
+@Produces({"application/json", "application/javascript"})
+@JSONP(callback = "eval", queryParam = "jsonpCallback")
+public JaxbBean getSimpleJSONP() {
+    return new JaxbBean("jsonp");
+}

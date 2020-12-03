@@ -1,0 +1,12 @@
+        Map val = new HashMap();
+        val.put("key1","item1");
+        val.put("key2","item2");
+        JsTypeObject jsObj = (JsTypeObject) converter.toTargetType(val);
+        assertEquals(val.getClass().getName(),jsObj.getJavaClassName());
+        JsTypeObject obj =  JsonStringParser.parseJsonString(jsObj.toJsonString());
+        assertEquals(obj, jsObj);JsonConverter.registerConverter(CnvTestTypeNotSupportedBeanA.class);
+        try {
+            jsObj = cnv.toTargetType(bean);
+        } catch (ConversionException e) {
+        }
+        assertNotNull(jsObj);

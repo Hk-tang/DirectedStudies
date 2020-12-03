@@ -1,0 +1,7 @@
+<code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Item</span> <span class="o">{</span>
+  <span class="nd">@Key</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="n">id</span><span class="o">;</span>
+  <span class="nd">@Key</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="n">value</span><span class="o">;</span>
+<span class="o">}</span>
+</code>

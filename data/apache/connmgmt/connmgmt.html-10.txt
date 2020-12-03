@@ -1,0 +1,5 @@
+
+SSLContext sslContext = SSLContexts.createSystemDefault();
+SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(
+        sslContext,
+        NoopHostnameVerifier.INSTANCE);

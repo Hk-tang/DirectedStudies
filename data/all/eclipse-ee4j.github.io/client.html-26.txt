@@ -1,0 +1,17 @@
+public static class MyRequestFilter implements ClientRequestFilter {
+    // this injection does not work as filter is registered as an instance:
+    // @Inject
+    // private MyInjectedService service;
+
+    @Override
+    public void filter(ClientRequestContext requestContext) throws IOException {
+        // use ServiceLocatorClientProvider to extract HK2 ServiceLocator from request
+        final ServiceLocator locator = ServiceLocatorClientProvider.getServiceLocator(requestContext);
+
+        // and ask for MyInjectedService:
+        final MyInjectedService service = locator.getService(MyInjectedService.class);
+
+        final String name = service.getName();
+        ...
+    }
+}

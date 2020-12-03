@@ -1,0 +1,3 @@
+String responseEntity = ClientBuilder.newClient()
+            .target("http://example.com").path("resource/rest")
+                        .request().get(String.class);

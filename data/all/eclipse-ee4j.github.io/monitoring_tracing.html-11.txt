@@ -1,0 +1,11 @@
+  1 $ curl -i http://localhost:9998/ALL/root/sub-resource-locator/sub-resource-method -H content-type:application/x-jersey-test --data '-=#[LKR]#=-' -H X-Jersey-Tracing-Threshold:SUMMARY -H accept:application/x-jersey-test -X POST
+  2 
+  3 X-Jersey-Tracing-000: START       [ ---- /  ---- ms |  ---- %] baseUri=[http://localhost:9998/ALL/] requestUri=[http://localhost:9998/ALL/root/sub-resource-locator/sub-resource-method] method=[POST] authScheme=[n/a] accept=[application/x-jersey-test] accept-encoding=n/a accept-charset=n/a accept-language=n/a content-type=[application/x-jersey-test] content-length=[11]
+  4 X-Jersey-Tracing-001: PRE-MATCH   [ 0.01 /  0.68 ms |  0.01 %] PreMatchRequest summary: 2 filters
+  5 X-Jersey-Tracing-002: MATCH       [ 8.44 /  9.15 ms |  4.59 %] RequestMatching summary
+  6 X-Jersey-Tracing-003: REQ-FILTER  [ 0.01 /  9.20 ms |  0.00 %] Request summary: 2 filters
+  7 X-Jersey-Tracing-004: RI          [86.14 / 95.49 ms | 46.87 %] ReadFrom summary: 3 interceptors
+  8 X-Jersey-Tracing-005: INVOKE      [ 0.04 / 95.70 ms |  0.02 %] Resource [org.glassfish.jersey.tests.integration.tracing.SubResource @901a4f3] method=[public org.glassfish.jersey.tests.integration.tracing.Message org.glassfish.jersey.tests.integration.tracing.SubResource.postSub(org.glassfish.jersey.tests.integration.tracing.Message)]
+  9 X-Jersey-Tracing-006: RESP-FILTER [ 0.01 / 96.55 ms |  0.00 %] Response summary: 2 filters
+ 10 X-Jersey-Tracing-007: WI          [85.95 / 183.69 ms | 46.77 %] WriteTo summary: 4 interceptors
+ 11 X-Jersey-Tracing-008: FINISHED    [ ---- / 183.79 ms |  ---- %] Response status: 200/SUCCESSFUL|OK

@@ -1,0 +1,8 @@
+@POST
+@Produces({"text/html”})
+@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+@Template(name = "/short-link”) @ErrorTemplate(name = "/error-form")
+@Valid
+public ShortenedLink createLink(@NotEmpty @FormParam("link") final String link) {
+    // ...
+}

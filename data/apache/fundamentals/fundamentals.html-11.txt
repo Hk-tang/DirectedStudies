@@ -1,0 +1,8 @@
+
+c1 = a
+path=/
+domain=localhost
+c2 = b
+path=/
+c3 = c
+domain=localhost

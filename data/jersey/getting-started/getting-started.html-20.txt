@@ -1,0 +1,10 @@
+    $ git commit -a -m "initial commit"
+    [master (root-commit) e2b58e3] initial commit
+     7 files changed, 221 insertions(+)
+     create mode 100644 Procfile
+     create mode 100644 pom.xml
+     create mode 100644 src/main/java/com/example/MyResource.java
+     create mode 100644 src/main/java/com/example/heroku/Main.java
+     create mode 100644 src/main/webapp/WEB-INF/web.xml
+     create mode 100644 src/test/java/com/example/MyResourceTest.java
+     create mode 100644 system.properties

@@ -1,0 +1,5 @@
+<dependency>
+    <groupId>org.glassfish.jersey.ext.rx</groupId>
+    <artifactId>jersey-rx-client-rxjava</artifactId>
+    <version>3.0.0</version>
+</dependency>

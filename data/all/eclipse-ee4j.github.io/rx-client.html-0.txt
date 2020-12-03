@@ -1,0 +1,25 @@
+final WebTarget destination = ...;
+final WebTarget forecast = ...;
+
+// Obtain recommended destinations.
+List<Destination> recommended = Collections.emptyList();
+try {
+    recommended = destination.path("recommended").request()
+            // Identify the user.
+            .header("Rx-User", "Sync")
+            // Return a list of destinations.
+            .get(new GenericType<List<Destination>>() {});
+} catch (final Throwable throwable) {
+    errors.offer("Recommended: " + throwable.getMessage());
+}
+
+// Forecasts. (depend on recommended destinations)
+final Map<String, Forecast> forecasts = new HashMap<>();
+for (final Destination dest : recommended) {
+    try {
+        forecasts.put(dest.getDestination(),
+                forecast.resolveTemplate("destination", dest.getDestination()).request().get(Forecast.class));
+    } catch (final Throwable throwable) {
+        errors.offer("Forecast: " + throwable.getMessage());
+    }
+}

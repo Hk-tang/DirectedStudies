@@ -1,0 +1,3 @@
+final Client client = ClientBuilder.newBuilder()
+    .register(MultiPartFeature.class)
+    .build();

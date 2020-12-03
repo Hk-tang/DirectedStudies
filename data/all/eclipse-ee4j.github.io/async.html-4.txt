@@ -1,0 +1,7 @@
+final AsyncInvoker asyncInvoker = target().path("http://example.com/resource/")
+        .request().async();
+final Future<Response> responseFuture = asyncInvoker.get();
+System.out.println("Request is being processed asynchronously.");
+final Response response = responseFuture.get();
+    // get() waits for the response to be ready
+System.out.println("Response received.");

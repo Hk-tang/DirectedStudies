@@ -1,0 +1,19 @@
+$ curl -v http://localhost:8080/myapp/myresource
+* About to connect() to localhost port 8080 (#0)
+*   Trying ::1...
+* Connection refused
+*   Trying 127.0.0.1...
+* connected
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+> GET /myapp/myresource HTTP/1.1
+> User-Agent: curl/7.25.0 (x86_64-apple-darwin11.3.0) libcurl/7.25.0 OpenSSL/1.0.1e zlib/1.2.7 libidn/1.22
+> Host: localhost:8080
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Content-Type: text/plain
+< Date: Sun, 26 May 2013 18:29:18 GMT
+< Content-Length: 7
+<
+* Connection #0 to host localhost left intact
+Got it!* Closing connection #0

@@ -1,0 +1,25 @@
+...
+import jakarta.ws.rs.sse.Sse;
+import jakarta.ws.rs.sse.SseEventSink;
+import jakarta.ws.rs.sse.OutboundSseEvent;
+...
+
+@Path("events")
+public static class SseResource {
+
+    @GET
+    @Produces(MediaType.SERVER_SENT_EVENTS)
+    public void getServerSentEvents(@Context SseEventSink eventSink, @Context Sse sse) {
+        new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+                // ... code that waits 1 second
+                final OutboundSseEvent event = sse.newEventBuilder()
+                    .name("message-to-client")
+                    .data(String.class, "Hello world " + i + "!")
+                    .build();
+                eventSink.send(event);
+            }
+        }).start();
+    }
+}
+                

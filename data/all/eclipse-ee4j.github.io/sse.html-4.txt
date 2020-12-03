@@ -1,0 +1,13 @@
+import jakarta.ws.rs.sse.SseEventSource;
+...
+Client client = ClientBuilder.newBuilder().build();
+WebTarget target = client.target("http://example.com/events");
+SseEventSource sseEventSource = SseEventSource.target(target).build();
+sseEventSource.register(event -> System.out.println(event.getName() + "; "
+    + event.readData(String.class)));
+sseEventSource.open();
+
+// do other stuff, block here and continue when done
+
+sseEventSource.close();
+                

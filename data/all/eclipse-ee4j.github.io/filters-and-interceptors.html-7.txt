@@ -1,0 +1,37 @@
+...
+import jakarta.ws.rs.core.FeatureContext;
+import jakarta.ws.rs.container.DynamicFeature;
+...
+
+@Path("helloworld")
+public class HelloWorldResource {
+
+    @GET
+    @Produces("text/plain")
+    public String getHello() {
+        return "Hello World!";
+    }
+
+    @GET
+    @Path("too-much-data")
+    public String getVeryLongString() {
+        String str = ... // very long string
+        return str;
+    }
+}
+
+// This dynamic binding provider registers GZIPWriterInterceptor
+// only for HelloWorldResource and methods that contain
+// "VeryLongString" in their name. It will be executed during
+// application initialization phase.
+public class CompressionDynamicBinding implements DynamicFeature {
+
+    @Override
+    public void configure(ResourceInfo resourceInfo, FeatureContext context) {
+        if (HelloWorldResource.class.equals(resourceInfo.getResourceClass())
+                && resourceInfo.getResourceMethod()
+                    .getName().contains("VeryLongString")) {
+            context.register(GZIPWriterInterceptor.class);
+        }
+    }
+}

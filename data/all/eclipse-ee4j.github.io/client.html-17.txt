@@ -1,0 +1,21 @@
+ClientConfig clientConfig = new ClientConfig();
+clientConfig.register(MyClientResponseFilter.class);
+clientConfig.register(new AnotherClientFilter());
+
+Client client = ClientBuilder.newClient(clientConfig);
+client.register(ThirdClientFilter.class);
+
+WebTarget webTarget = client.target("http://example.com/rest");
+webTarget.register(FilterForExampleCom.class);
+WebTarget resourceWebTarget = webTarget.path("resource");
+WebTarget helloworldWebTarget = resourceWebTarget.path("helloworld");
+WebTarget helloworldWebTargetWithQueryParam =
+        helloworldWebTarget.queryParam("greeting", "Hi World!");
+
+Invocation.Builder invocationBuilder =
+        helloworldWebTargetWithQueryParam.request(MediaType.TEXT_PLAIN_TYPE);
+invocationBuilder.header("some-header", "true");
+
+Response response = invocationBuilder.get();
+System.out.println(response.getStatus());
+System.out.println(response.readEntity(String.class));

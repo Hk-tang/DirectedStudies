@@ -1,0 +1,7 @@
+@InjectLink(value="widgets/{id}", bindings={
+    @Binding(name="id" value="${resource.id}"}
+)
+
+@InjectLink(value="widgets/{value}", bindings={
+    @Binding("${resource.id}")})
+@InjectLink("widgets/${resource.id}")

@@ -1,0 +1,8 @@
+// Create JAX-RS application.
+final Application application = new ResourceConfig()
+        .packages("org.glassfish.jersey.examples.jsonmoxy")
+        // The line below that registers MOXy feature can be
+        // omitted if FEATURE_AUTO_DISCOVERY_DISABLE is
+        // not disabled.
+        .register(MoxyJsonFeature.class)
+        .register(jsonConfigResolver);

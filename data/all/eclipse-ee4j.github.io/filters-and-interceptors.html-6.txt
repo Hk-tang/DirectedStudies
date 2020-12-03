@@ -1,0 +1,48 @@
+...
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.util.zip.GZIPInputStream;
+
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.NameBinding;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+...
+
+
+// @Compress annotation is the name binding annotation
+@NameBinding
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Compress {}
+
+
+@Path("helloworld")
+public class HelloWorldResource {
+
+    @GET
+    @Produces("text/plain")
+    public String getHello() {
+        return "Hello World!";
+    }
+
+    @GET
+    @Path("too-much-data")
+    @Compress
+    public String getVeryLongString() {
+        String str = ... // very long string
+        return str;
+    }
+}
+
+// interceptor will be executed only when resource methods
+// annotated with @Compress annotation will be executed
+@Compress
+public class GZIPWriterInterceptor implements WriterInterceptor {
+    @Override
+    public void aroundWriteTo(WriterInterceptorContext context)
+                    throws IOException, WebApplicationException {
+        final OutputStream outputStream = context.getOutputStream();
+        context.setOutputStream(new GZIPOutputStream(outputStream));
+        context.proceed();
+    }
+}

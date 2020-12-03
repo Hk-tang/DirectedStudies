@@ -1,0 +1,10 @@
+<dependency>
+    <groupId>org.glassfish.jersey.test-framework</groupId>
+    <artifactId>jersey-test-framework-core</artifactId>
+    <version>3.0.0</version>
+</dependency>
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>...</version>
+</dependency>

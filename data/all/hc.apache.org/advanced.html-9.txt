@@ -1,0 +1,20 @@
+
+
+private final class MyCallback implements FutureCallback<Boolean> {
+
+    public void failed(final Exception ex) {
+        // do something
+    }
+
+    public void completed(final Boolean result) {
+        // do something
+    }
+
+    public void cancelled() {
+        // do something
+    }
+}
+
+HttpRequestFutureTask<Boolean> task = futureRequestExecutionService.execute(
+    new HttpGet("http://www.google.com"), HttpClientContext.create(),
+    new OkidokiHandler(), new MyCallback());

@@ -1,0 +1,15 @@
+@Path("country/{id}")
+public static class CountryResource {
+
+    private CountryService countryService;
+
+    public CountryResource() {
+        // init countryService
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_XML)
+    public Country getCountry(@PathParam("countryId") int countryId) {
+        return countryService.getCountry(countryId);
+    }
+}

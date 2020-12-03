@@ -1,0 +1,16 @@
+<code><span class="kd">class</span> <span class="nc">CustomBackOff</span> <span class="kd">implements</span> <span class="nc">BackOff</span> <span class="o">{</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">long</span> <span class="nf">nextBackOffMillis</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="o">...</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">reset</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="o">...</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">request</span><span class="o">.</span><span class="na">setUnsuccessfulResponseHandler</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">HttpBackOffUnsuccessfulResponseHandler</span><span class="o">(</span><span class="k">new</span> <span class="nc">CustomBackOff</span><span class="o">()));</span>
+</code>

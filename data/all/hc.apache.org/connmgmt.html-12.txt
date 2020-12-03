@@ -1,0 +1,2 @@
+
+DefaultHostnameVerifier hostnameVerifier = new DefaultHostnameVerifier(null);

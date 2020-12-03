@@ -1,0 +1,7 @@
+final Map<String, String> namespacePrefixMapper = new HashMap<String, String>();
+namespacePrefixMapper.put("http://www.w3.org/2001/XMLSchema-instance", "xsi");
+
+final MoxyJsonConfig configuration = new MoxyJsonConfig()
+        .setNamespacePrefixMapper(namespacePrefixMapper)
+        .setNamespaceSeparator(':');
+                        

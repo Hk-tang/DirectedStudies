@@ -1,0 +1,7 @@
+final MyBean myBean = new MyBean("posted MyBean", 11);
+Response response = webTarget.path("resource").request("application/xml")
+        .post(Entity.entity(myBean, "application/xml"));
+
+System.out.println(response.getStatus());
+final String responseEntity = response.readEntity(String.class);
+System.out.println(responseEntity);

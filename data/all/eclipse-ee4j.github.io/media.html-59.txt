@@ -1,0 +1,3 @@
+final ResourceConfig config = new ResourceConfig()
+    .packages("org.glassfish.jersey.examples.xmlmoxy")
+    .register(MoxyXmlFeature.class);

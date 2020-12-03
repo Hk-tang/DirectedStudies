@@ -1,0 +1,11 @@
+Client client = ClientBuilder.newClient();
+// register custom RxInvokerProvider
+client.register(CompletionStageRxInvokerProvider.class);
+
+CompletionStage<Response> response =
+        client.target("http://jersey.java.net")
+              .request()
+              .rx(CompletionStageRxInvoker.class)
+              // Now we have an instance of CompletionStageRxInvoker returned from our registered RxInvokerProvider,
+              // which is CompletionStageRxInvokerProvider in this particular scenario.
+              .get();

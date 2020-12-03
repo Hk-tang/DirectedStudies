@@ -1,0 +1,6 @@
+ClientConfig clientConfig = new ClientConfig();
+clientConfig.register(MyClientResponseFilter.class);
+clientConfig.register(new AnotherClientFilter());
+Client client = ClientBuilder.newClient(clientConfig);
+client.register(ThirdClientFilter.class);
+Configuration newConfiguration = client.getConfiguration();

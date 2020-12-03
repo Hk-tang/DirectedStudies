@@ -1,0 +1,1 @@
+ExceptionBuilder.with(YourException.class).useBundle("com.foo.SampleBundle").decode("msgKey").throwIt();

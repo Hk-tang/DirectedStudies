@@ -1,0 +1,3 @@
+String strVal = "Test";
+JsTypeSimple jsObj = new JsTypeSimple(strVal);
+System.out.println(jsObj.toJsonString());

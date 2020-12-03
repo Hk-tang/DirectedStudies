@@ -1,0 +1,12 @@
+
+RequestConfig globalConfig = RequestConfig.custom()
+        .setCookieSpec(CookieSpecs.DEFAULT)
+        .build();
+CloseableHttpClient httpclient = HttpClients.custom()
+        .setDefaultRequestConfig(globalConfig)
+        .build();
+RequestConfig localConfig = RequestConfig.copy(globalConfig)
+        .setCookieSpec(CookieSpecs.STANDARD_STRICT)
+        .build();
+HttpGet httpGet = new HttpGet("/");
+httpGet.setConfig(localConfig);

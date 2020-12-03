@@ -1,0 +1,15 @@
+@Local
+public interface LocalEjb {
+    @GET
+    @Produces("text/plain")
+   public String getIt();
+}
+
+@Stateless
+@Path("/stateless")
+public class StatelessEjbResource implements LocalEjb {
+    @Override
+    public String getIt() {
+        return "Hi Stateless!";
+    }
+}

@@ -1,0 +1,7 @@
+final Client client = ClientBuilder.newBuilder()
+        // The line below that registers MOXy feature can be
+        // omitted if FEATURE_AUTO_DISCOVERY_DISABLE is
+        // not disabled.
+        .register(MoxyJsonFeature.class)
+        .register(jsonConfigResolver)
+        .build();
