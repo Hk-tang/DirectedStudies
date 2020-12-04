@@ -17,7 +17,7 @@ They were used for me to gain a better understanding of k-clustering.
 `LSA/lsa.py` is my implementation of using LSA on the documentation code examples.
 
 ## Input
-The input should be at least one directory containing at least one subdirectory with **at least 6 text** files. e.g., 
+The input should be at least one directory **in the data directory** containing at least one subdirectory with **at least 6 text** files. e.g., 
 ```
 data/
     library_1/
