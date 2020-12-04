@@ -75,7 +75,7 @@ def plot(data, documentname):
 
 if __name__ == '__main__':
     plt.style.use('classic')
-    base_path = "data/"  # e.g., data/apache
+    base_path = "data/"
     for root, libs, _ in os.walk(base_path):
         for lib in libs:
             for lib_root, docs, files in os.walk(os.path.normpath(root + "/" + lib)):

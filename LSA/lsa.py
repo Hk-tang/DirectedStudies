@@ -61,42 +61,48 @@ def create_svd(matrix, num_topics):
     model = TruncatedSVD(n_components=num_topics, algorithm='randomized',
                              n_iter=100, random_state=122)
 
-    model.fit(matrix)
-
+    try:
+        model.fit(matrix)
+    except ValueError:
+        print("problem")
     # print(len(model.components_))
 
     return model
 
 
+# Read all files within a directory
 def read_data(directory):
     data = []
-    for filename in os.listdir(directory):
-        with open(os.path.normpath(os.path.join(directory, filename)), "r") as file:
-            data.append(file.read())
+    for root, _, files in os.walk(directory):
+        for file in files:
+            with open(os.path.normpath(os.path.join(root, file)), "r") as f:
+                data.append(f.read())
     return data
 
 
 if __name__ == '__main__':
     pd.set_option("display.max_colwidth", 200)
-    # dataset = fetch_20newsgroups(shuffle=True, random_state=1,
-    #                              remove=('headers', 'footers', 'quotes'))
-    # # data is a list where each element is a document as one string
-    # data = dataset.data
-    data = read_data(os.path.normpath("data/hc.apache.org"))
-    # print(len(data))
-    data = pre_process(data)
-    data = remove_stopwords(data)
-    vectorizer, matrix = create_document_term_matrix(data)
+    base_path = "data/"
+    for root, libs, _ in os.walk(base_path):
+        for lib in libs:
+            for lib_root, docs, files in os.walk(os.path.normpath(root + "/" + lib)):
+                for doc in docs:
+                    # data is a list where each element is a document as one string
+                    raw_data = read_data(os.path.normpath(lib_root + "/" + doc))
+                    data = pre_process(raw_data)
+                    data = remove_stopwords(data)
+                    vectorizer, matrix = create_document_term_matrix(data)
 
-    # for j in range(1, 21):
-    svd_model = create_svd(matrix, 30)
+                    # for j in range(1, 21):
+                    j = 10
+                    svd_model = create_svd(matrix, j)
 
-    terms = vectorizer.get_feature_names()
-
-    for i, comp in enumerate(svd_model.components_):
-        terms_comp = zip(terms, comp)
-        sorted_terms = sorted(terms_comp, key=lambda x: x[1], reverse=True)[:7]
-        items = []
-        for t in sorted_terms:
-            items.append(t[0])
-        print("Topic " + str(i + 1) + ": ", ", ".join(items))
+                    terms = vectorizer.get_feature_names()
+                    print(doc)
+                    for i, comp in enumerate(svd_model.components_):
+                        terms_comp = zip(terms, comp)
+                        sorted_terms = sorted(terms_comp, key=lambda x: x[1], reverse=True)[:7]
+                        items = []
+                        for t in sorted_terms:
+                            items.append(t[0])
+                        print("Topic " + str(i + 1) + ": ", ", ".join(items))
