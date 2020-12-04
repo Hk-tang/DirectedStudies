@@ -53,9 +53,9 @@ Example input files are provided in the `data` directory
     venv\Scripts\activate.bat # For Windows
     pip install -r requirements.txt
    ```
-3. Run the program
+3. Run the program from the project root directory
     ```
-   python text_k.py
+   python k_cluster/text_k.py
    ```
 
 ## Results
