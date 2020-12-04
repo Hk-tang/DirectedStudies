@@ -1,5 +1,0 @@
-@GET
-@Produces("application/json")
-public MyJaxbBean getMyBean() {
-    return new MyJaxbBean("Agamemnon", 32);
-}

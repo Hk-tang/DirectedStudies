@@ -1,3 +1,0 @@
-
-                    webTarget.path("planet").request().post(Entity.xml(planet));
-                

@@ -1,8 +1,0 @@
-
-StringEntity myEntity = new StringEntity("important message", 
-   ContentType.create("text/plain", "UTF-8"));
-
-System.out.println(myEntity.getContentType());
-System.out.println(myEntity.getContentLength());
-System.out.println(EntityUtils.toString(myEntity));
-System.out.println(EntityUtils.toByteArray(myEntity).length);

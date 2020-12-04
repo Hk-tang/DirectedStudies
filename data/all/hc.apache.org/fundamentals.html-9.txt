@@ -1,3 +1,0 @@
-
-Set-Cookie: c1=a; path=/; domain=localhost
-Set-Cookie: c2=b; path="/", c3=c; domain="localhost"

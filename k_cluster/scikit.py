@@ -1,3 +1,5 @@
+# This file explores using scikit-learn for implementing k-clustering
+
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.cluster import KMeans

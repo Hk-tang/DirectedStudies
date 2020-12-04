@@ -1,3 +1,0 @@
-Response postResponse =
-        helloworldWebTarget.request(MediaType.TEXT_PLAIN_TYPE)
-                .post(Entity.entity("A string entity to be POSTed", MediaType.TEXT_PLAIN));

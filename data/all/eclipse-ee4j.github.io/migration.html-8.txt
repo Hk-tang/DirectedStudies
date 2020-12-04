@@ -1,3 +1,0 @@
-
-                                URI.create(UriComponent.encodeTemplateNames("/path/{param}"));
-                            

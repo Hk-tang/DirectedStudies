@@ -1,8 +1,0 @@
-
-// Execute a GET with timeout settings and return response content as String.
-Request.Get("http://somehost/")
-        .connectTimeout(1000)
-        .socketTimeout(1000)
-        .execute().returnContent().asString();
-
-    

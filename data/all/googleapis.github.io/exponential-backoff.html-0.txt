@@ -1,7 +1,0 @@
-<code><span class="nc">HttpRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">request</span><span class="o">.</span><span class="na">setUnsuccessfulResponseHandler</span><span class="o">(</span><span class="k">new</span> <span class="nc">HttpBackOffUnsuccessfulResponseHandler</span><span class="o">(</span><span class="k">new</span> <span class="nc">ExponentialBackOff</span><span class="o">()));</span>
-<span class="c1">// HttpBackOffUnsuccessfulResponseHandler is designed to work with only one HttpRequest at a time.</span>
-<span class="c1">// As a result, you MUST create a new instance of HttpBackOffUnsuccessfulResponseHandler with a new</span>
-<span class="c1">// instance of BackOff for each instance of HttpRequest.</span>
-<span class="nc">HttpResponse</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span>
-</code>

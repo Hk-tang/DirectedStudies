@@ -1,8 +1,0 @@
-SslConfigurator sslConfig = SslConfigurator.newInstance()
-        .trustStoreFile("./truststore_client")
-        .trustStorePassword("secret-password-for-truststore")
-        .keyStoreFile("./keystore_client")
-        .keyPassword("secret-password-for-keystore");
-
-SSLContext sslContext = sslConfig.createSSLContext();
-Client client = ClientBuilder.newBuilder().sslContext(sslContext).build();

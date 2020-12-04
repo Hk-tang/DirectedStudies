@@ -1,4 +1,0 @@
-Client client = ClientBuilder.newClient();
-                        WebTarget target = client.target(restURL).path("myresource/{param}"); String result =
-                        target.pathParam("param", "value").get(String.class);
-                    

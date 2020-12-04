@@ -1,2 +1,0 @@
-java -Djersey.config.allowSystemPropertiesProvider=true -DNAME=VALUE
-            

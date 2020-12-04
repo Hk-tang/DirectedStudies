@@ -1,8 +1,0 @@
-
-This is an overly long line that \
-might not fit the available page \
-width and had to be broken into \
-multiple lines.
-
-This line fits the page width.
-                

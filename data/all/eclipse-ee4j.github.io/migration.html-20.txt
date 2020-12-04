@@ -1,3 +1,0 @@
-Client client = ClientBuilder.newClient();
-                        WebTarget target = client.target(restURL); target.register(new HttpBasicAuthFilter(username, password));
-                    

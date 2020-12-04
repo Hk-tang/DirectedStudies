@@ -1,3 +1,0 @@
-
-gogo$ install http://central.maven.org/maven2/org/glassfish/jersey/examples/osgi-http-service/bundle/<version>/bundle-<version>.jar
-Bundle ID: 303

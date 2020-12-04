@@ -1,2 +1,0 @@
-curl -X OPTIONS -H "Allow: application/vnd.sun.wadl+xml" \
-    -v http://localhost:9998/country/15

@@ -1,9 +1,0 @@
-public class MyApplication extends ResourceConfig {
-    public MyApplication() {
-        register(org.glassfish.jersey.server.filter.UriConnegFilter.class);
-        register(org.glassfish.jersey.server.validation.ValidationFeature.class);
-        register(org.glassfish.jersey.server.spring.SpringComponentProvider.class);
-        register(org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainerProvider.class);
-        property(ServerProperties.METAINF_SERVICES_LOOKUP_DISABLE, true);
-    }
-}

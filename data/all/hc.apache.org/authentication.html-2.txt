@@ -1,4 +1,0 @@
-
-NTCredentials creds = new NTCredentials("user", "pwd", "workstation", "domain");
-System.out.println(creds.getUserPrincipal().getName());
-System.out.println(creds.getPassword());

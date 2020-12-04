@@ -1,6 +1,0 @@
-<code><span class="k">try</span> <span class="o">{</span>
-  <span class="n">request</span><span class="o">.</span><span class="na">execute</span><span class="o">()</span>
-<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">HttpResponseException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-  <span class="nc">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getStatusMessage</span><span class="o">());</span>
-<span class="o">}</span>
-</code>

@@ -1,1 +1,0 @@
-<span class="pl-k">import static</span> <span class="pl-smi">org.asynchttpclient.Dsl.*</span>;

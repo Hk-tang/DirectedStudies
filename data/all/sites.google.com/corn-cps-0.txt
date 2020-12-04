@@ -1,1 +1,0 @@
-List classes = CPScanner.scanClasses(new ClassFilter().packageName().annotation(SampleAnnotation.class));

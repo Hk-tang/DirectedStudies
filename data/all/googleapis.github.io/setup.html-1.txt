@@ -1,5 +1,0 @@
-<code><span class="nt"><dependency></span>
-  <span class="nt"><groupId></span>com.google.http-client<span class="nt"></groupId></span>
-  <span class="nt"><artifactId></span>google-http-client<span class="nt"></artifactId></span>
-<span class="nt"></dependency></span>
-</code>

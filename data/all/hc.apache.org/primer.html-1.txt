@@ -1,2 +1,0 @@
-<input type="text" readonly name="..." value="...">
-<input type="hidden" name="..." value="...">

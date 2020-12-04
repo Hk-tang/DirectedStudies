@@ -1,3 +1,0 @@
-
-                    Planet planet = webTarget.path("planet").request(MediaType.APPLICATION_XML_TYPE).get(Planet.class);
-                

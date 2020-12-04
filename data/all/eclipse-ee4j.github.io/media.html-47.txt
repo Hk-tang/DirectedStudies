@@ -1,1 +1,0 @@
-curl -v http://localhost:8080/base/helloworld/StreamSource -d "<test/>"

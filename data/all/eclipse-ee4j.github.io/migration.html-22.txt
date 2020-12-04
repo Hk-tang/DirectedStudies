@@ -1,3 +1,0 @@
-Client client = ClientBuilder.newClient();
-                        WebTarget target = client.target(restURL); Response response = target.request("text/plain").get();
-                    

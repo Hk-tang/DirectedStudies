@@ -1,5 +1,0 @@
-Observable<Response> observable = RxObservable.newClient()
-                                                    .target("http://example.com/resource")
-                                                    .request()
-                                                    .rx(RxObservableInvoker.class)
-                                                    .get();

@@ -1,2 +1,0 @@
-WebTarget webTarget = client.target("http://example.com/rest");
-webTarget.register(FilterForExampleCom.class);

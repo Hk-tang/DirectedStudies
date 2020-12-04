@@ -1,4 +1,6 @@
-## Initialisation
+# This file explores clustering example data manually to understand k-clustering better
+
+# Initialisation
 
 import pandas as pd
 import numpy as np

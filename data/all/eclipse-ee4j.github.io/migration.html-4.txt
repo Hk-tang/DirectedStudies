@@ -1,3 +1,0 @@
-
-                                <dependency> <groupId>org.glassfish.jersey.containers.glassfish</groupId> <artifactId>jersey-gf-cdi</artifactId>
-                                <version>${pre-2.15-version}</version> </dependency>

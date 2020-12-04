@@ -1,5 +1,0 @@
-@POST
-@Produces("multipart/mixed")
-public MultiPart post(final FormDataMultiPart multiPart) {
-    return multiPart;
-}

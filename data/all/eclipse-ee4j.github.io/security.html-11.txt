@@ -1,5 +1,0 @@
-AccessToken storedToken = ...;
-Feature filterFeature = OAuth1ClientSupport.builder(consumerCredentials)
-    .feature()
-    .accessToken(storedToken)
-    .build();

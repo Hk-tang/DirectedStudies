@@ -1,3 +1,0 @@
-client.register(FilterA.class)
-      .register(new FilterB())
-      .property("my-property", true);

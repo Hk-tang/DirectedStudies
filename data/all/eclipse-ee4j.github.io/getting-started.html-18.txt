@@ -1,4 +1,0 @@
-    $ heroku create
-    Creating simple-heroku-webapp... done, stack is cedar
-    http://simple-heroku-webapp.herokuapp.com/ | git@heroku.com:simple-heroku-webapp.git
-    Git remote heroku added

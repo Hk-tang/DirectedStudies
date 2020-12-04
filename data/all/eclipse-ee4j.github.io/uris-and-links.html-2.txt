@@ -1,6 +1,0 @@
-final URI uri = UriBuilder.fromUri("http://{host}/{path}?q={param}")
-    .resolveTemplate("host", "localhost")
-    .resolveTemplate("path", "myApp")
-    .resolveTemplate("param", "value").build();
-
-uri.toString(); // returns "http://localhost/myApp?q=value"

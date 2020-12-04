@@ -1,2 +1,0 @@
-@InjectLinks({@InjectLink(resource=WidgetsResource.class, rel = "self")})
-List<Link> links

@@ -1,2 +1,0 @@
-ExecutorService myExecutorService = Executors.newCachedThreadPool();
-Client client = ClientBuilder.newBuilder().executorService(myExecutorService).build();

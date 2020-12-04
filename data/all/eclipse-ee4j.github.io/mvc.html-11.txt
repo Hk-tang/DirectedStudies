@@ -1,4 +1,0 @@
-new ResourceConfig()
-    .register(org.glassfish.jersey.server.mvc.MvcFeature.class)
-    // Further configuration of ResourceConfig.
-    .register( ... );

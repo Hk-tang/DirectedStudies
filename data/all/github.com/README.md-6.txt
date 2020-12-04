@@ -1,2 +1,0 @@
-<span class="pl-k">Future<<span class="pl-smi">Response</span>></span> whenResponse <span class="pl-k">=</span> asyncHttpClient<span class="pl-k">.</span>prepareGet(<span class="pl-s"><span class="pl-pds">"</span>http://www.example.com/<span class="pl-pds">"</span></span>)<span class="pl-k">.</span>execute();
-<span class="pl-smi">Response</span> response <span class="pl-k">=</span> whenResponse<span class="pl-k">.</span>get();

@@ -1,2 +1,0 @@
-IHelloWorldService service = CallDelegator.getServiceProxy(IHelloWorldService.class);
-String resp = service.sayHelloWorld();

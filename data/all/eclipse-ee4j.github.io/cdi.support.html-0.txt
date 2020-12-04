@@ -1,6 +1,0 @@
-<dependency>
-    <groupId>org.glassfish.jersey.ext.cdi</groupId>
-    <artifactId>jersey-cdi1x</artifactId>
-    <version>3.0.0</version>
-</dependency>
-            

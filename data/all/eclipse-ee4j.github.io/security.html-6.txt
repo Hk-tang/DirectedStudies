@@ -1,5 +1,0 @@
-<dependency>
-    <groupId>org.glassfish.jersey.security</groupId>
-    <artifactId>oauth1-server</artifactId>
-    <version>3.0.0</version>
-</dependency>

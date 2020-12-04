@@ -1,5 +1,0 @@
-final Application application = new ResourceConfig()
-        // Validation.
-        .register(ValidationConfigurationContextResolver.class)
-        // Further configuration.
-        .register( ... );

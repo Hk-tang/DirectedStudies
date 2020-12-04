@@ -1,3 +1,0 @@
-<c:forEach items="${model}" var="error">
-    ${error.message} "<strong>${error.invalidValue}</strong>"<br/>
-</c:forEach>

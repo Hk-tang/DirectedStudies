@@ -1,8 +1,0 @@
-Client client = ClientBuilder.newBuilder()
-    .register(MyBeanMessageBodyReader.class).build();
-
-Response response = client.target("http://example/comm/resource")
-    .request(MediaType.APPLICATION_XML).get();
-System.out.println(response.getStatus());
-MyBean myBean = response.readEntity(MyBean.class);
-System.out.println(myBean);

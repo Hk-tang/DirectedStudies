@@ -1,6 +1,0 @@
-
-# Final start level of OSGi framework. This is used by GlassFish launcher code
-# to set the start level of the OSGi framework once server is up and running so that
-# optional services can start. The initial start level of framework is controlled using
-# the standard framework property called org.osgi.framework.startlevel.beginning
-glassfish.osgi.start.level.final=3

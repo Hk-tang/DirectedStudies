@@ -1,6 +1,0 @@
-public class MyApplication extends ResourceConfig {
-    public MyApplication() {
-        super(MyResource.class);
-        register(RolesAllowedDynamicFeature.class);
-    }
-}

@@ -1,3 +1,0 @@
-Client client = ClientBuilder.newBuilder()
-                        .sslContext(sslContext) .hostnameVerifier(hostnameVerifier) .build();
-                    

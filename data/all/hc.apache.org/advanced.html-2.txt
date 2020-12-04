@@ -1,6 +1,0 @@
-
-PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager(
-    connFactory);
-CloseableHttpClient httpclient = HttpClients.custom()
-        .setConnectionManager(cm)
-        .build();

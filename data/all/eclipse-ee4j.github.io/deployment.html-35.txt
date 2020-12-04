@@ -1,4 +1,0 @@
-
-asadmin> osgi-shell
-Use "exit" to exit and "help" for online help.
-gogo$

@@ -1,5 +1,0 @@
-try {
-  ...
-} catch (AnException e) {
-  ExceptionCatcher.trap(e).process();
-}

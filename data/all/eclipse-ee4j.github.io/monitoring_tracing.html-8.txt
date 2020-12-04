@@ -1,4 +1,0 @@
-request count: 1, average request processing [ms]: 260
-request count: 2, average request processing [ms]: 135
-request count: 3, average request processing [ms]: 93
-request count: 4, average request processing [ms]: 73

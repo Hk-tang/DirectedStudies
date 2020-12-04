@@ -1,3 +1,0 @@
-context = new JettisonJaxbContext(
-    JettisonConfig.mappedJettison().serializeAsArray("name").build(),
-    types);

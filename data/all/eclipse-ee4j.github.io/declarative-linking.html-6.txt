@@ -1,3 +1,0 @@
-@InjectLink("widgets/{id}")
-
-@InjectLink("widgets/${instance.id}")

@@ -1,9 +1,0 @@
-@Provider
-public class EntityNotFoundMapper implements ExceptionMapper<jakarta.persistence.EntityNotFoundException> {
-  public Response toResponse(jakarta.persistence.EntityNotFoundException ex) {
-    return Response.status(404).
-      entity(ex.getMessage()).
-      type("text/plain").
-      build();
-  }
-}

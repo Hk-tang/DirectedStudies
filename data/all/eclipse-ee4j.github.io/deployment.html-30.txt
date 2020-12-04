@@ -1,4 +1,0 @@
-
-~/glassfish/bin$ ./asadmin
-Use "exit" to exit and "help" for online help.
-asadmin>

@@ -1,7 +1,0 @@
-@Override
-    protected Application configure() {
-        // Find first available port.
-        forceSet(TestProperties.CONTAINER_PORT, "0");
-
-        return new ResourceConfig(Resource.class);
-    }

@@ -1,4 +1,0 @@
-        Long val = Long.MAX_VALUE;
-        JsTypeObject jsObj = converter.toTargetType(val);
-        Object obj = converter.toJava(jsObj);
-        assertEquals(val, obj);

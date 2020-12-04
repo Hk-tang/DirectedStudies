@@ -1,4 +1,0 @@
-
-Client client = ClientBuilder.newClient(new ClientConfig()
-        .register(MyClientResponseFilter.class)
-        .register(new AnotherClientFilter());

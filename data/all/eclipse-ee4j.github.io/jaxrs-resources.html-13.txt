@@ -1,5 +1,0 @@
-@GET
-public String get(@Context HttpHeaders hh) {
-    MultivaluedMap<String, String> headerParams = hh.getRequestHeaders();
-    Map<String, Cookie> pathParams = hh.getCookies();
-}

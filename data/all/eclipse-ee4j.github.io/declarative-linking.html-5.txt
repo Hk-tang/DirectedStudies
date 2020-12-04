@@ -1,7 +1,0 @@
-@ProvideLink(value = Order.class,rel = "self",
-     bindings = @Binding(name = "orderId", value = "${instance.id}"))
-@ProvideLink(value = PaymentConfirmation.class, rel = "order",
-     bindings = @Binding(name = "orderId", value = "${instance.orderId}"))
-@GET
-@Path("/{orderId}")
-public Response get(@PathParam("orderId") String orderId)

@@ -1,9 +1,0 @@
-<code><span class="nc">ExponentialBackOff</span> <span class="n">backoff</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ExponentialBackOff</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
-    <span class="o">.</span><span class="na">setInitialIntervalMillis</span><span class="o">(</span><span class="mi">500</span><span class="o">)</span>
-    <span class="o">.</span><span class="na">setMaxElapsedTimeMillis</span><span class="o">(</span><span class="mi">900000</span><span class="o">)</span>
-    <span class="o">.</span><span class="na">setMaxIntervalMillis</span><span class="o">(</span><span class="mi">6000</span><span class="o">)</span>
-    <span class="o">.</span><span class="na">setMultiplier</span><span class="o">(</span><span class="mf">1.5</span><span class="o">)</span>
-    <span class="o">.</span><span class="na">setRandomizationFactor</span><span class="o">(</span><span class="mf">0.5</span><span class="o">)</span>
-    <span class="o">.</span><span class="na">build</span><span class="o">();</span>
-<span class="n">request</span><span class="o">.</span><span class="na">setUnsuccessfulResponseHandler</span><span class="o">(</span><span class="k">new</span> <span class="nc">HttpBackOffUnsuccessfulResponseHandler</span><span class="o">(</span><span class="n">backoff</span><span class="o">));</span>
-</code>

@@ -1,3 +1,0 @@
-SSLContext ssl = ... your configured SSL context;
-Client client = ClientBuilder.newBuilder().sslContext(ssl).build();
-Response response = client.target("https://example.com/resource").request().get();

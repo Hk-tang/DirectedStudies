@@ -1,5 +1,0 @@
-try {
-  ...
-} catch (AnException e) {
-  ExceptionCatcher.trap(e).execute(command1).notify(listener1).process();
-}

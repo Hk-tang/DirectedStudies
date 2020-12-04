@@ -1,3 +1,0 @@
-@InjectLink(value="widgets/${instance.id}/offers",
-    condition="${instance.offers}")
-URI offers;

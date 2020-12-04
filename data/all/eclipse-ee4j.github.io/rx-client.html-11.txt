@@ -1,6 +1,0 @@
-Flowable<Response> observable = RxObservable.newClient()
-                            .target("http://example.com/resource")
-                            .request()
-                            .rx(RxFlowableInvoker.class)
-                            .get();
-                        

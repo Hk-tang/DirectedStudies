@@ -1,3 +1,0 @@
-// New Client
-Client client = ClientBuilder.newClient();
-client.register(RxListenableFutureInvokerProvider.class);

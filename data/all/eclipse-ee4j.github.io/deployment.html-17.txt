@@ -1,4 +1,0 @@
-<init-param>
-    <param-name>jakarta.ws.rs.Application</param-name>
-    <param-value>org.foo.MyApplication</param-value>
-</init-param>

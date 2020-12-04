@@ -1,7 +1,0 @@
-@POST
-@Consumes("application/xml")
-public Response post(String content) {
-  URI createdUri = ...
-  create(content);
-  return Response.created(createdUri).build();
-}

@@ -1,8 +1,0 @@
-@Path("di-resource")
-public class MyDiResource {
-
-    @Inject HttpSession httpSession;
-
-    ...
-
-}

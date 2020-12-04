@@ -1,2 +1,0 @@
-HttpAuthenticationFeature feature = HttpAuthenticationFeature.basicBuilder()
-    .nonPreemptive().credentials("user", "superSecretPassword").build();

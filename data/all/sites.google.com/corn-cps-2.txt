@@ -1,1 +1,0 @@
-List resources = CPScanner.scanResources(new ResourceFilter().packageName("net.sf.corn.cps.sample").resourceName());

@@ -1,6 +1,0 @@
-
-SystemDefaultRoutePlanner routePlanner = new SystemDefaultRoutePlanner(
-        ProxySelector.getDefault());
-CloseableHttpClient httpclient = HttpClients.custom()
-        .setRoutePlanner(routePlanner)
-        .build();

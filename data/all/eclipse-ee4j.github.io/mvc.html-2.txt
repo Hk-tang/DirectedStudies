@@ -1,8 +1,0 @@
-@Path("foo")
-@Template
-public class Foo {
-
-    public String getFoo() {
-        return "FOO";
-    }
-}

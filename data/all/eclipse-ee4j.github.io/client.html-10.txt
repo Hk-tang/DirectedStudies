@@ -1,1 +1,0 @@
-WebTarget helloworldWebTarget = resourceWebTarget.path("helloworld");

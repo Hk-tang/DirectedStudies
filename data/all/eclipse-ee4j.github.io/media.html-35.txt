@@ -1,6 +1,0 @@
-@GET
-@JSONP
-@Produces({"application/json", "application/javascript"})
-public JaxbBean getSimpleJSONP() {
-    return new JaxbBean("jsonp");
-}

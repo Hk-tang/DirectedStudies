@@ -1,3 +1,0 @@
-final ResourceConfig resourceConfig = new ResourceConfig(MyResource.class);
-resourceConfig.register(RolesAllowedDynamicFeature.class);
-                        

@@ -1,2 +1,0 @@
-JsTypeObject jsObj = JsTypeNull.NULL;
-assertTrue(jsObj.isNull());

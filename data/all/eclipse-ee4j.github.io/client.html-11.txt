@@ -1,2 +1,0 @@
-WebTarget helloworldWebTargetWithQueryParam =
-        helloworldWebTarget.queryParam("greeting", "Hi World!");

@@ -1,9 +1,0 @@
-//concurrently executed thread size
-threadConcurrentSize=2
-//Maximum pool size
-threadMaxPoolSize=20000
-//Thread max waiting time in the pool before executing it //Wait for ever value is 0
-threadKeepAliveTimeInMS=0
-//Enable/disable thread execution timeout
-//Enabling it cause keep alive time also valid for thread execution
-enableThreadExecutionTimeout=false 

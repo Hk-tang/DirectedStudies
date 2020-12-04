@@ -1,2 +1,0 @@
-var jsonrq = new JsonRpcRequest("http://localhost:8888/jsonrpc");
-var response = jsonrq.send("358", "HelloWorldService", "sayHelloWorld");

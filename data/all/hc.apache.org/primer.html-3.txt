@@ -1,2 +1,0 @@
-<input type="submit" name="..." value="...">
-<button type="submit" name="..." value="...">

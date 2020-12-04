@@ -1,6 +1,0 @@
-private static ExceptionCommand logCommand = new ExceptionCommand() {
-        @Override
-        public void execute(Exception e) {
-            loggerGeneric.log(e.getMessage());
-        }
-};

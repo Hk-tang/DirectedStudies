@@ -1,7 +1,0 @@
-WebTarget webTarget = // initialize web target to the context root
-            // of example application
-Response response = webTarget.path("resource")
-                        .request(MediaType.APPLICATION_XML).get();
-System.out.println(response.getStatus());
-String myBeanXml = response.readEntity(String.class);
-System.out.println(myBeanXml);

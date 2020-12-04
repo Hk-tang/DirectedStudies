@@ -1,4 +1,0 @@
-{
-   "region" : "CA",
-   "streetAddress" : "1234 Fake St."
-}

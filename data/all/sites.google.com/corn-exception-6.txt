@@ -1,1 +1,0 @@
-ExceptionBuilder.with(YourException.class).decode("msgKey", "Serhat").throwIt();

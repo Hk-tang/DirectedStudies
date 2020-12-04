@@ -1,4 +1,0 @@
-@GateService(name="HelloWorldService",componentTarget="net.sf.corn.gate.sample.service.HelloWorldServiceImpl")
-public interface IHelloWorldService {
-   public String sayHelloWorld();
-}

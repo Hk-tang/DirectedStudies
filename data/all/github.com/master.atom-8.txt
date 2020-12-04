@@ -1,1 +1,0 @@
-Add mention that this project is looking for a new maintainer

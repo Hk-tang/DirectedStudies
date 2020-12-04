@@ -1,4 +1,0 @@
-new ResourceConfig()
-    .register(MyTemplateProcessor.class)
-    // Further configuration of ResourceConfig.
-    .register( ... );

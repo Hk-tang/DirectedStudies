@@ -1,7 +1,0 @@
-
-                <dependency>
-                    <groupId>org.glassfish.jersey.ext.microprofile</groupId>
-                    <artifactId>jersey-mp-config</artifactId>
-                    <version>2.30</scope>
-                </dependency>
-            

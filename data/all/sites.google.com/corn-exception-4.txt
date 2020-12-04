@@ -1,1 +1,0 @@
-ExceptionBuilder.with(IllegalArgumentException.class).message("Sample exception").execute(logCommand).notify(exListener).throwIt();

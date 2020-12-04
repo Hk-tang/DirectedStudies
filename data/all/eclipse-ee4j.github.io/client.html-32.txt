@@ -1,3 +1,0 @@
-Response response = client.target("http://localhost:8080/rest/homer/contact").request()
-    .property(HTTP_AUTHENTICATION_BASIC_USERNAME, "homer")
-    .property(HTTP_AUTHENTICATION_BASIC_PASSWORD, "p1swd745").get();

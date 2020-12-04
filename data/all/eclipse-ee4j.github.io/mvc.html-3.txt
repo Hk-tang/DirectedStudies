@@ -1,4 +1,0 @@
-@GET
-public Viewable get() {
-    return new Viewable("index", this);
-}

@@ -1,1 +1,0 @@
-HttpAuthenticationFeature feature = HttpAuthenticationFeature.basicBuilder().build();

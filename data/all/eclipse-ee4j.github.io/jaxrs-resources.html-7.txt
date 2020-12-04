@@ -1,5 +1,0 @@
-@GET
-@Produces({"application/xml; qs=0.9", "application/json"})
-public String doGetAsXmlOrJson() {
-    ...
-}

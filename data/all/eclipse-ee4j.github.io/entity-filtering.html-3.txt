@@ -1,7 +1,0 @@
-new ResourceConfig()
-    // Set query parameter name for dynamic filtering
-    .property(SelectableEntityFilteringFeature.QUERY_PARAM_NAME, "select")
-    // Register the SelectableEntityFilteringFeature.
-    .register(SelectableEntityFilteringFeature.class)
-    // Further configuration of ResourceConfig.
-    .register( ... );

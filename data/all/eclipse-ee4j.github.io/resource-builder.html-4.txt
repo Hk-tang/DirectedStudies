@@ -1,8 +1,0 @@
-
-                    final Resource.Builder resourceBuilder = Resource.builder("helloworld");
-
-                    final Resource.Builder childResource = resourceBuilder.addChildResource("subresource");
-                    childResource.addMethod("GET").handledBy(new GetInflector());
-
-                    final Resource resource = resourceBuilder.build();
-                

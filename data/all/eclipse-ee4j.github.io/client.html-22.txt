@@ -1,6 +1,0 @@
-File f = ...
-
-...
-
-webTarget.request().post(Entity.entity(f, MediaType.TEXT_PLAIN_TYPE));
-            

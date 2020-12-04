@@ -1,1 +1,0 @@
-WebTarget resourceWebTarget = webTarget.path("resource");

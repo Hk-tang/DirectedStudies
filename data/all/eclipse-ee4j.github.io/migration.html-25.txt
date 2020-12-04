@@ -1,5 +1,0 @@
-HTTPSProperties prop = new
-                        HTTPSProperties(hostnameVerifier, sslContext); DefaultClientConfig dcc = new DefaultClientConfig();
-                        dcc.getProperties().put(HTTPSProperties.PROPERTY_HTTPS_PROPERTIES, prop); Client client =
-                        Client.create(dcc);
-                    

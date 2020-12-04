@@ -1,5 +1,0 @@
-<dependency>
-    <groupId>org.glassfish.jersey.media</groupId>
-    <artifactId>jersey-media-json-jettison</artifactId>
-    <version>3.0.0</version>
-</dependency>

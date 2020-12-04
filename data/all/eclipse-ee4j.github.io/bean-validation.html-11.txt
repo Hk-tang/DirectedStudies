@@ -1,9 +1,0 @@
-@Path("/")
-class MyResourceClass {
-
-    @POST
-    @Consumes("application/xml")
-    public void registerUser(@PremiumUser User user) {
-        ...
-    }
-}

@@ -1,3 +1,0 @@
-@InjectLinks(
-    @InjectLink(value="widgets/${resource.nextId}", rel="next")
-)
