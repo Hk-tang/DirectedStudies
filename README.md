@@ -10,6 +10,8 @@ This repository contains the Python scripts used for the directed studies course
 It contains my exploration and implementation of Latent Sematic Analysis (LSA), and k-clustering.
 The `data` directory contains the code examples of the 5 libraries documentation.
 The `results` directory contains the elbow method graph of clustering the different examples for each document for each library.
+The clustering is of the code examples within **one** page of documentation of a library.
+i.e., for each document (page) in a library's documentation I perform clustering on the code examples of that document.
 
 The `k_cluster/manual.py` and `k_cluster/text_k.py` file are not used to generate the clusters analyzed in the project.
 They were used for me to gain a better understanding of k-clustering.
