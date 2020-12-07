@@ -18,6 +18,8 @@ They were used for me to gain a better understanding of k-clustering.
 `k_cluster/text_k.py` is the implementation of k-clustering that is used to generate clusters from code examples in documentation.
 `LSA/lsa.py` is my implementation of using LSA on the documentation code examples.
 
+The `Ground Truth.xlsx` file contains the data from the manual analysis of the 5 libraries.
+
 ## Input
 The input should be at least one directory **in the data directory** containing at least one subdirectory with **at least 6 text** files. e.g., 
 ```
