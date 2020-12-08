@@ -14,6 +14,20 @@ def elbow(Y_sklearn, documentname):
 
     kmeans = [KMeans(n_clusters=i, max_iter=600) for i in number_clusters]
 
+    # Uncomment to look at the clusters
+    # for i in range(len(kmeans)):
+    #     kmeans[i].fit(Y_sklearn)
+    #     labels = kmeans[i].predict(Y_sklearn)
+    #     clusters = {}
+    #     n = 0
+    #     for item in labels:
+    #         if item in clusters:
+    #             clusters[item].append(labels[n])
+    #         else:
+    #             clusters[item] = [labels[n]]
+    #         n += 1
+    #     print(clusters)
+
     score = [kmeans[i].fit(Y_sklearn).score(Y_sklearn) for i in range(len(kmeans))]
     score = [i * -1 for i in score]
 
