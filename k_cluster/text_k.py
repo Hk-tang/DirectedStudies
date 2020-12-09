@@ -38,6 +38,7 @@ def elbow(Y_sklearn, documentname):
     if not os.path.exists("results/" + documentname.split("/")[0]):
         os.makedirs("results/" + documentname.split("/")[0])
     plt.savefig("results/" + documentname)
+    plt.clf()
     # plt.show()
 
 
