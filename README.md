@@ -19,6 +19,11 @@ They were used for me to gain a better understanding of k-clustering.
 `LSA/lsa.py` is my implementation of using LSA on the documentation code examples.
 
 The `Ground Truth.xlsx` file contains the data from the manual analysis of the 5 libraries.
+This file contains 5 sheets.
+The first sheet (`Per Library w program`) details the results of the manual analysis of the libraries and the results given by the tool.
+The second sheet (`Dist per library`) details the distribution of the metrics per library, while the third sheet (`Per document`) details the distribution of the metrics per document.
+The fourth sheet (`Per document w program`) details the results of the program per document of each library.
+The fifth sheet (`Program Results`) detail the results of the program.
 
 ## Input
 The input should be at least one directory **in the data directory** containing at least one subdirectory with **at least 6 text** files. e.g., 
