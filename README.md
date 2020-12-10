@@ -69,6 +69,8 @@ Example input files are provided in the `data` directory
 Results are outputted to the results directory under that library's name and document.
 They are PNG images of the graph generated from the elbow method.
 
+The labels for each clustering of each document for the elbow method are printed to stdout, the indices of which correspond to the file ordering in the data.
+
 ## Resources
 These are the resources that I used for this repository.
 
